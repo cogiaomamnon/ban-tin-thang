@@ -3,8 +3,11 @@ import styled from "styled-components";
 
 // Import images from lichHoc folder using require
 const images = [
-	require("../../img/lichHoc/z7463631724955_54b692623760bf193057dbf5efd10d26.jpg"),
-	require("../../img/lichHoc/z7463631728136_a9aec061fc7fd3194aa4a98cc57d1439.jpg")
+	require("../../img/lichHoc/1.png"),
+	require("../../img/lichHoc/2.jpg"),
+	require("../../img/lichHoc/3.png"),
+	require("../../img/lichHoc/4.jpg"),
+	require("../../img/lichHoc/5.png"),
 ];
 
 interface LichHocModalProps {
