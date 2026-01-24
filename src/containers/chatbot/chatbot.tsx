@@ -14,15 +14,15 @@ export const MyChatBot = () => {
 	// example flow for testing
 	const flow = {
 		start: {
-			message: "Hello! Make sure you've set your API key before getting started!",
-			options: ["I am ready!"],
-			chatDisabled: true,
+			message: "Bạn đã sẵn sàng để bắt đầu cuộc trò chuyện chưa?",
+			options: ["Bắt đầu trò chuyện"],
+			chatDisabled: false,
 			path: async (params) => {
 				if (!apiKey) {
 					await params.simulateStreamMessage("You have not set your API key!");
 					return "start";
 				}
-				await params.simulateStreamMessage("Ask away!");
+				await params.simulateStreamMessage("Chào bạn tôi là chatbot của trường Trúc Đào, bạn muốn biết gì nào!");
 				return "openai";
 			},
 		},
