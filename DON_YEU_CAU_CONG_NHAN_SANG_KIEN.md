@@ -147,7 +147,7 @@ Xây dựng **trang web hoàn chỉnh** riêng cho lớp Nhỡ - Trường Mầm
 
 ### 📌 BƯỚC 1: KHẢO SÁT NHU CẦU VÀ PHÂN TÍCH YÊU CẦU
 **Thời gian thực hiện:** Tháng 9/2025 (2 tuần)  
-**Người thực hiện:** Cô Lê Thị Bích Trâm (chủ trì), Cô Trần Thị Thu, Cô Nguyễn Thị Hiệp - Giáo viên lớp Nhỡ
+**Người thực hiện:** Cô Lê Thị Bích Trâm, Cô Trần Thị Thu, Cô Nguyễn Thị Hiệp - Giáo viên lớp Nhỡ
 
 #### 1.1. Khảo sát nhu cầu phụ huynh lớp Nhỡ
 
@@ -232,7 +232,7 @@ Xây dựng **trang web hoàn chỉnh** riêng cho lớp Nhỡ - Trường Mầm
 
 ### 📌 BƯỚC 2: THIẾT KẾ GIAO DIỆN VÀ KIẾN TRÚC HỆ THỐNG
 **Thời gian thực hiện:** Tháng 9-10/2025 (3 tuần)  
-**Người thực hiện:** Cô Lê Thị Bích Trâm (chủ trì) - Giáo viên chủ nhiệm lớp Nhỡ
+**Người thực hiện:** Cô Lê Thị Bích Trâm - Giáo viên chủ nhiệm lớp Nhỡ
 
 #### 2.1. Thiết kế giao diện (UI/UX) cho trang web lớp Nhỡ
 
@@ -537,7 +537,7 @@ ban-tin-thang/
 
 ### 📌 BƯỚC 4: TÍCH HỢP TRÍ TUỆ NHÂN TẠO (AI)
 **Thời gian thực hiện:** Tháng 11/2025 (2 tuần)  
-**Người thực hiện:** Cô Lê Thị Bích Trâm (chủ trì) - Giáo viên chủ nhiệm lớp Nhỡ
+**Người thực hiện:** Cô Lê Thị Bích Trâm - Giáo viên chủ nhiệm lớp Nhỡ
 
 #### 4.1. Giới thiệu về Chat Bot AI cho lớp Nhỡ
 
@@ -743,7 +743,7 @@ ban-tin-thang/
 
 ### 📌 BƯỚC 6: TRIỂN KHAI VÀ VẬN HÀNH
 **Thời gian thực hiện:** Tháng 11-12/2025 (2 tuần)  
-**Người thực hiện:** Cô Lê Thị Bích Trâm (chủ trì) - Giáo viên chủ nhiệm lớp Nhỡ
+**Người thực hiện:** Cô Lê Thị Bích Trâm - Giáo viên chủ nhiệm lớp Nhỡ
 
 #### 6.1. Triển khai lên GitHub Pages
 
