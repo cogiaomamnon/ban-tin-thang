@@ -140,140 +140,64 @@ Về cấu trúc thư mục dự án, chúng tôi tổ chức một cách khoa h
 ---
 
 ### 📌 BƯỚC 3: PHÁT TRIỂN CÁC CHỨC NĂNG CHÍNH
-**Thời gian thực hiện:** Tháng 10-11/2025 (4 tuần)  
-**Người thực hiện:** Cô Lê Thị Bích Trâm (lập trình), Cô Trần Thị Thu và Cô Nguyễn Thị Hiệp (nội dung, hình ảnh lớp Nhỡ)
+
+Giai đoạn phát triển chức năng là giai đoạn quan trọng nhất, kéo dài bốn tuần từ tháng mười đến tháng mười một năm hai nghìn hai mươi lăm. Trong thời gian này, cô Lê Thị Bích Trâm đảm nhận phần lập trình và xây dựng các chức năng, trong khi cô Trần Thị Thu và cô Nguyễn Thị Hiệp hỗ trợ về mặt nội dung và hình ảnh cho trang web lớp Nhỡ.
 
 #### 3.1. Chức năng 1: Hệ thống thông báo lớp Nhỡ
 
-**Mô tả:** Hiển thị icon chuông thông báo với badge số lượng, nhấn vào mở popup danh sách thông báo riêng của lớp Nhỡ
+Chức năng đầu tiên và quan trọng nhất mà chúng tôi phát triển chính là hệ thống thông báo riêng cho lớp Nhỡ. Đây là một hệ thống hiển thị icon hình chuông ngay trên thanh điều hướng với một badge màu đỏ hiển thị số lượng thông báo chưa đọc. Khi phụ huynh nhấn vào icon chuông, một popup sẽ xuất hiện với danh sách đầy đủ các thông báo của lớp Nhỡ, được sắp xếp theo thứ tự thời gian từ mới nhất đến cũ nhất.
 
-**Chi tiết thực hiện:**
+Hệ thống này bao gồm bốn thành phần chính. Icon chuông được đặt ngay cạnh logo ở góc trên bên trái và luôn hiển thị trên header. Badge số lượng là một vòng tròn màu đỏ nhỏ hiển thị số thông báo mà phụ huynh chưa xem. Popup thông báo mở ra khi nhấn vào chuông, liệt kê tất cả các thông báo quan trọng của lớp. Và khi phụ huynh muốn xem chi tiết một thông báo nào đó, modal sẽ hiển thị toàn bộ nội dung đầy đủ của thông báo đó.
 
-| Thành phần | Mô tả | Cách hoạt động |
-|------------|-------|----------------|
-| Icon chuông 🔔 | Đặt cạnh logo | Luôn hiển thị trên header |
-| Badge số lượng | Vòng tròn đỏ với số | Hiển thị số thông báo lớp Nhỡ chưa đọc |
-| Popup thông báo | Danh sách thông báo lớp Nhỡ | Mở khi nhấn vào chuông |
-| Chi tiết thông báo | Modal hiển thị nội dung đầy đủ | Mở khi nhấn vào từng thông báo |
-
-**Danh sách thông báo mẫu của lớp Nhỡ:**
-
-| STT | Tiêu đề | Nội dung tóm tắt |
-|-----|---------|------------------|
-| 1 | Lịch họp phụ huynh lớp Nhỡ | Họp đầu năm học ngày 15/01/2026, lớp Nhỡ |
-| 2 | Thông báo đóng học phí lớp Nhỡ | Hạn cuối đóng học phí tháng 1 |
-| 3 | Chương trình Tết Nguyên Đán lớp Nhỡ | Lịch nghỉ Tết và chương trình văn nghệ |
-| 4 | Khám sức khỏe định kỳ | Lịch khám sức khỏe cho các bé lớp Nhỡ |
-| 5 | Hoạt động ngoại khóa lớp Nhỡ | Tham quan công viên Đà Nẵng |
-| 6 | Thay đổi giờ đón trẻ | Điều chỉnh giờ đón buổi chiều lớp Nhỡ |
+Để minh họa cho tính năng này, chúng tôi đã chuẩn bị sáu thông báo mẫu cho lớp Nhỡ, bao gồm thông báo về lịch họp phụ huynh đầu năm học vào ngày mười lăm tháng một năm hai nghìn hai mươi sáu, thông báo về hạn cuối đóng học phí tháng một, thông báo về chương trình Tết Nguyên Đán với lịch nghỉ và chương trình văn nghệ, thông báo về lịch khám sức khỏe định kỳ cho các bé, thông báo về hoạt động ngoại khóa tham quan công viên Đà Nẵng, và thông báo về điều chỉnh giờ đón trẻ buổi chiều.
 
 #### 3.2. Chức năng 2: Phần giới thiệu lớp Nhỡ (Hero Section)
 
-**Mô tả:** Phần đầu tiên của trang web, tạo ấn tượng mạnh với phụ huynh lớp Nhỡ
+Phần Hero Section là phần đầu tiên mà khách truy cập nhìn thấy khi vào trang web, do đó nó đóng vai trò quyết định trong việc tạo ấn tượng với phụ huynh lớp Nhỡ. Chúng tôi thiết kế phần này với bố cục hai cột rõ ràng.
 
-**Chi tiết thực hiện:**
+Ở cột bên trái, chúng tôi đặt tiêu đề chính "Trúc Đào, ươm mầm yêu thương, vững bước tương lai" - một câu slogan thể hiện triết lý giáo dục của nhà trường. Ngay bên dưới là đoạn mô tả giới thiệu về lớp Nhỡ, nơi các bé từ bốn đến năm tuổi được phát triển toàn diện về thể chất, trí tuệ và tình cảm. Chúng tôi cũng đặt hai nút bấm: nút "Theo dõi nhà trường" dẫn đến trang Facebook chính thức của trường để phụ huynh có thể cập nhật thông tin thường xuyên, và nút "Khám phá" giúp cuộn trang xuống phần nội dung chi tiết về các hoạt động của lớp Nhỡ.
 
-| Thành phần | Nội dung | Vị trí |
-|------------|----------|--------|
-| Tiêu đề chính | "Trúc Đào, ươm mầm yêu thương, vững bước tương lai" | Cột trái |
-| Mô tả | Giới thiệu lớp Nhỡ - Nơi các bé 4-5 tuổi được phát triển toàn diện | Cột trái |
-| Nút "Theo dõi nhà trường" | Link đến Facebook trường | Cột trái |
-| Nút "Khám phá" | Cuộn xuống nội dung lớp Nhỡ | Cột trái |
-| 3 hình ảnh xếp chồng | Ảnh các bé lớp Nhỡ đang học tập, vui chơi | Cột phải |
-
-**Bố cục 3 ảnh xếp chồng:**
-
-```
-              ┌─────────────┐
-              │   Ảnh 1     │
-              │  (trên cùng)│
-         ┌────┴─────────────┴────┐
-         │       Ảnh 2           │
-         │     (giữa)            │
-    ┌────┴───────────────────────┴────┐
-    │           Ảnh 3                  │
-    │         (dưới cùng)              │
-    └──────────────────────────────────┘
-```
+Ở cột bên phải, chúng tôi sắp xếp ba hình ảnh theo kiểu xếp chồng nghệ thuật, tạo chiều sâu và thu hút người xem. Ba hình ảnh này đều là những khoảnh khắc đẹp nhất của các bé lớp Nhỡ trong các hoạt động học tập và vui chơi, được chúng tôi cẩn thận lựa chọn để thể hiện không khí vui vẻ, năng động của lớp.
 
 #### 3.3. Chức năng 3: Hoạt động của bé lớp Nhỡ
 
-**Mô tả:** Giới thiệu 3 nội dung chính về chương trình giáo dục của lớp Nhỡ (trẻ 4-5 tuổi)
+Để giúp phụ huynh hiểu rõ hơn về chương trình giáo dục dành cho trẻ bốn đến năm tuổi tại lớp Nhỡ, chúng tôi xây dựng phần này với ba nội dung chính, mỗi nội dung được đánh số và trình bày xen kẽ giữa văn bản và hình ảnh.
 
-**Chi tiết thực hiện:**
+Nội dung thứ nhất với số "01" giới thiệu về việc các bé lớp Nhỡ được học tập một cách bài bản và khoa học. Ở độ tuổi này, các bé được tiếp cận với những kiến thức cơ bản phù hợp với lứa tuổi, phát triển tư duy logic, khả năng quan sát và phân tích. Hình ảnh minh họa cho phần này là các bé đang tập trung trong giờ học, bên cạnh nội dung được đặt ở cột trái và hình ảnh ở cột phải.
 
-| Mục | Số thứ tự | Tiêu đề | Nội dung | Hình ảnh |
-|-----|-----------|---------|----------|----------|
-| 1 | 01 | Bé lớp Nhỡ được học tập một cách bài bản, khoa học | Kiến thức cơ bản phù hợp lứa tuổi 4-5, tư duy logic, quan sát, phân tích | Ảnh bé lớp Nhỡ đang học |
-| 2 | 02 | Tham gia các hoạt động vui chơi, ngoại khóa | Rèn luyện thể chất, kỹ năng giao tiếp, hợp tác cho trẻ 4-5 tuổi | Ảnh hoạt động ngoài trời lớp Nhỡ |
-| 3 | 03 | Thưởng thức bữa ăn thơm ngon, dinh dưỡng | Thực đơn khoa học, đầy đủ dinh dưỡng cho trẻ 4-5 tuổi | Ảnh bữa ăn lớp Nhỡ |
+Nội dung thứ hai với số "02" nói về các hoạt động vui chơi và ngoại khóa mà các bé được tham gia. Những hoạt động này không chỉ giúp rèn luyện thể chất mà còn phát triển kỹ năng giao tiếp và hợp tác cho trẻ ở độ tuổi bốn đến năm. Để tạo sự đa dạng trong bố cục, phần này được đặt hình ảnh ở cột trái và nội dung ở cột phải, với hình ảnh các bé vui chơi ngoài trời.
 
-**Bố cục xen kẽ:**
-- Mục 01: Nội dung trái - Hình ảnh phải
-- Mục 02: Hình ảnh trái - Nội dung phải
-- Mục 03: Nội dung trái - Hình ảnh phải
+Nội dung thứ ba với số "03" giới thiệu về bữa ăn thơm ngon và đầy dinh dưỡng mà các bé lớp Nhỡ được thưởng thức mỗi ngày. Thực đơn được xây dựng khoa học, đảm bảo đầy đủ dinh dưỡng cần thiết cho sự phát triển của trẻ ở độ tuổi này. Bố cục quay trở lại với nội dung bên trái và hình ảnh bữa ăn của lớp ở bên phải.
 
 #### 3.4. Chức năng 4: Lời nhắn cô giáo lớp Nhỡ
 
-**Mô tả:** Hiển thị lời nhắn yêu thương từ 3 cô giáo lớp Nhỡ
+Để tạo sự gần gũi và thân thiện giữa gia đình với nhà trường, chúng tôi xây dựng phần lời nhắn yêu thương từ ba cô giáo đang trực tiếp chăm sóc và giảng dạy tại lớp Nhỡ.
 
-**Chi tiết thực hiện:**
+Cô Bích Trâm, với vai trò chủ nhiệm lớp Nhỡ, có ảnh đại diện cotram.png và gửi lời chào mừng các bé đến với lớp. Cô cam kết sẽ luôn đồng hành cùng các bé ở độ tuổi bốn đến năm phát triển toàn diện về mọi mặt, từ thể chất đến trí tuệ và tình cảm.
 
-| Cô giáo | Chức vụ | Ảnh đại diện | Nội dung lời nhắn |
-|---------|---------|--------------|-------------------|
-| Cô Bích Trâm | Chủ nhiệm lớp Nhỡ | cotram.png | Chào mừng các bé lớp Nhỡ đến lớp, cam kết đồng hành cùng các bé 4-5 tuổi phát triển toàn diện |
-| Cô Thu | Giáo viên lớp Nhỡ | cothu.jpg | Chia sẻ niềm hạnh phúc được chào đón các bé lớp Nhỡ, tạo môi trường vui vẻ |
-| Cô Hiệp | Giáo viên lớp Nhỡ | cohiep.png | Tin tưởng mỗi bé lớp Nhỡ là một bông hoa cần được vun đắp bằng tình thương |
+Cô Thu, một trong hai giáo viên lớp Nhỡ với ảnh đại diện cothu.jpg, chia sẻ về niềm hạnh phúc được chào đón các bé vào lớp mỗi ngày. Cô luôn cố gắng tạo ra một môi trường học tập vui vẻ, an toàn và đầy yêu thương cho các bé.
+
+Cô Hiệp, giáo viên thứ ba của lớp Nhỡ với ảnh đại diện cohiep.png, bày tỏ niềm tin rằng mỗi bé trong lớp đều như một bông hoa nhỏ, cần được vun đắp và chăm sóc bằng tình yêu thương và sự kiên nhẫn để nở rộ những đức tính tốt đẹp.
 
 #### 3.5. Chức năng 5: Gallery hình ảnh lớp Nhỡ
 
-**Mô tả:** Hiển thị ảnh các hoạt động của các bé lớp Nhỡ dưới dạng lưới và slideshow
+Gallery hình ảnh là một trong những chức năng được phụ huynh yêu thích nhất, cho phép họ xem lại những khoảnh khắc đáng nhớ của con mình tại lớp Nhỡ. Chúng tôi thiết kế gallery với hai chế độ xem.
 
-**Chi tiết thực hiện:**
+Chế độ lưới ảnh hiển thị mười chín bức ảnh được sắp xếp thành ba cột, tạo ra một bức tranh tổng thể về các hoạt động phong phú của lớp. Khi di chuột qua mỗi bức ảnh, nó sẽ phóng to một trăm mười phần trăm với hiệu ứng mượt mà, giúp người xem có thể quan sát rõ hơn. Tất cả các ảnh được lưu trữ trong thư mục src/img/khoanhKhac/, chứa những khoảnh khắc đẹp nhất của các bé trong các hoạt động học tập, vui chơi và sinh hoạt hàng ngày.
 
-| Thành phần | Mô tả | Số lượng |
-|------------|-------|----------|
-| Lưới ảnh | Ảnh lớp Nhỡ xếp 3 cột, hiệu ứng zoom khi hover | 19 ảnh |
-| Slideshow | Xem ảnh lớp Nhỡ dạng trình chiếu với thumbnail | 19 ảnh |
-| Thư mục ảnh | src/img/khoanhKhac/ - Ảnh hoạt động lớp Nhỡ | - |
-
-**Hiệu ứng:**
-- Hover vào ảnh: Phóng to 110%
-- Click vào ảnh: Mở slideshow
-- Slideshow có nút qua/lại và thumbnail
+Chế độ slideshow cho phép xem ảnh dạng trình chiếu với kích thước lớn hơn, kèm theo các thumbnail nhỏ ở phía dưới để dễ dàng chuyển đổi giữa các ảnh. Khi nhấn vào bất kỳ ảnh nào trong lưới, slideshow sẽ tự động mở ra tại vị trí ảnh đó, có các nút điều hướng qua lại rất tiện lợi.
 
 #### 3.6. Chức năng 6: Góc Phụ Huynh lớp Nhỡ
 
-**Mô tả:** Popup hiển thị các tài liệu tuyên truyền, kiến thức nuôi dạy trẻ 4-5 tuổi
+Góc Phụ Huynh là một popup đặc biệt được thiết kế để chia sẻ các tài liệu tuyên truyền và kiến thức hữu ích về cách nuôi dạy trẻ ở độ tuổi bốn đến năm. Chức năng này được kích hoạt khi phụ huynh nhấn vào menu "Góc Phụ Huynh" trên thanh điều hướng.
 
-**Chi tiết thực hiện:**
-
-| Thành phần | Mô tả |
-|------------|-------|
-| Nút mở | Menu "Góc Phụ Huynh" trên header |
-| Popup | Chiếm 90% màn hình |
-| Nội dung | Hiển thị 1 ảnh, có nút qua/lại |
-| Thư mục ảnh | src/img/tuyenTruyen/ |
-
-**Nội dung ảnh tuyên truyền cho phụ huynh lớp Nhỡ:**
-- Kiến thức chăm sóc trẻ 4-5 tuổi
-- Dinh dưỡng cho bé lứa tuổi mầm non
-- Phòng chống dịch bệnh ở trẻ nhỏ
-- Kỹ năng làm cha mẹ - Đồng hành cùng con lớp Nhỡ
-- An toàn cho trẻ 4-5 tuổi
+Popup sẽ chiếm chín mươi phần trăm diện tích màn hình, hiển thị từng ảnh tài liệu một cách rõ ràng với các nút điều hướng qua lại thuận tiện. Các ảnh được lưu trong thư mục src/img/tuyenTruyen/ và bao gồm nhiều chủ đề quan trọng như kiến thức chăm sóc trẻ bốn đến năm tuổi, dinh dưỡng phù hợp cho bé ở lứa tuổi mầm non, cách phòng chống dịch bệnh cho trẻ nhỏ, kỹ năng làm cha mẹ hiệu quả và đồng hành cùng con tại lớp Nhỡ, cũng như các biện pháp đảm bảo an toàn cho trẻ ở độ tuổi này.
 
 #### 3.7. Chức năng 7: Lịch Học lớp Nhỡ
 
-**Mô tả:** Popup hiển thị lịch học, thời khóa biểu, thực đơn riêng của lớp Nhỡ
+Tương tự như Góc Phụ Huynh, Lịch Học cũng được thiết kế dưới dạng popup để hiển thị lịch học, thời khóa biểu chi tiết và thực đơn hàng tuần của lớp Nhỡ. Phụ huynh có thể mở chức năng này bằng cách nhấn vào menu "Lịch Học" trên header.
 
-**Chi tiết thực hiện:**
-
-| Thành phần | Mô tả |
-|------------|-------|
-| Nút mở | Menu "Lịch Học" trên header |
-| Popup | Chiếm 90% màn hình |
-| Nội dung | Ảnh lịch học, thời khóa biểu lớp Nhỡ |
-| Thư mục ảnh | src/img/lichHoc/ |
+Popup chiếm chín mươi phần trăm màn hình và hiển thị các ảnh lịch học được chuẩn bị sẵn, cho phép phụ huynh xem thời khóa biểu của từng ngày trong tuần, các môn học mà con mình sẽ được tham gia, cũng như thực đơn chi tiết cho từng bữa ăn. Các ảnh này được lưu trữ trong thư mục src/img/lichHoc/ và được cập nhật thường xuyên mỗi tuần.
 
 #### 3.8. Chức năng 8: Chat Bot AI lớp Nhỡ
 
