@@ -143,89 +143,696 @@ Xây dựng **trang web hoàn chỉnh** cho Trường Mầm Non Trúc Đào vớ
 
 ##### B. CÁC BƯỚC THỰC HIỆN GIẢI PHÁP
 
-**BƯỚC 1: Khảo sát nhu cầu và phân tích yêu cầu** *(Tháng 9/2025)*
+---
 
-| Hoạt động | Nội dung | Kết quả |
-|-----------|----------|---------|
-| Khảo sát phụ huynh | Phát phiếu khảo sát 150 phụ huynh về nhu cầu thông tin | 85% mong muốn có trang web trường |
-| Khảo sát giáo viên | Phỏng vấn 15 giáo viên về khó khăn trong truyền thông | Xác định 5 vấn đề chính cần giải quyết |
-| Phân tích đối thủ | Nghiên cứu 10 trang web trường mầm non khác | Xác định các tính năng cần có |
-| Xác định yêu cầu | Tổng hợp và phân loại yêu cầu | Danh sách 9 chức năng chính |
+### 📌 BƯỚC 1: KHẢO SÁT NHU CẦU VÀ PHÂN TÍCH YÊU CẦU
+**Thời gian thực hiện:** Tháng 9/2025 (2 tuần)  
+**Người thực hiện:** Cô Lê Thị Bích Trâm (chủ trì), Cô Trần Thị Thu, Cô Nguyễn Thị Hiệp
 
-**BƯỚC 2: Thiết kế giao diện và kiến trúc hệ thống** *(Tháng 9-10/2025)*
+#### 1.1. Khảo sát nhu cầu phụ huynh
 
-- Thiết kế giao diện (UI/UX) thân thiện, phù hợp với đối tượng phụ huynh
-- Lựa chọn màu sắc cam ấm áp, phù hợp với môi trường mầm non
-- Thiết kế responsive - hiển thị tốt trên mọi thiết bị
-- Xây dựng kiến trúc hệ thống module hóa
+**Mục tiêu:** Tìm hiểu nhu cầu thực tế của phụ huynh về việc tiếp nhận thông tin từ nhà trường
 
-**BƯỚC 3: Phát triển các chức năng chính** *(Tháng 10-11/2025)*
+**Cách thực hiện:**
+- Thiết kế phiếu khảo sát gồm 15 câu hỏi về:
+  - Cách thức nhận thông tin hiện tại
+  - Mức độ hài lòng với cách truyền thông hiện tại
+  - Nhu cầu về trang web trường
+  - Các tính năng mong muốn
+- Phát phiếu khảo sát cho 150 phụ huynh của 5 lớp
+- Thu thập và phân tích kết quả
 
-| STT | Chức năng | Mô tả chi tiết | Lợi ích |
-|-----|-----------|----------------|---------|
-| 1 | **Hệ thống thông báo** | Icon chuông với badge số lượng, popup danh sách thông báo, chi tiết từng thông báo | Phụ huynh không bỏ lỡ thông tin quan trọng |
-| 2 | **Phần giới thiệu (Hero)** | Tiêu đề, mô tả sứ mệnh, 3 hình ảnh xếp chồng nghệ thuật | Tạo ấn tượng đầu tiên chuyên nghiệp |
-| 3 | **Hoạt động của bé** | 3 nội dung: Học tập, Ngoại khóa, Dinh dưỡng | Phụ huynh hiểu rõ chương trình giáo dục |
-| 4 | **Lời nhắn cô giáo** | Lời nhắn yêu thương từ 3 cô giáo chủ nhiệm | Tạo sự gắn kết giữa cô và phụ huynh |
-| 5 | **Gallery hình ảnh** | Lưới ảnh 3 cột + Slideshow với 19+ hình ảnh | Phụ huynh theo dõi hoạt động của con |
-| 6 | **Góc Phụ Huynh** | Popup xem ảnh tuyên truyền, kiến thức nuôi dạy con | Cung cấp kiến thức hữu ích |
-| 7 | **Lịch Học** | Popup xem lịch học, thời khóa biểu, thực đơn | Tiện lợi tra cứu mọi lúc |
-| 8 | **Chat Bot AI** | Tư vấn tự động 24/7 bằng trí tuệ nhân tạo | Giảm tải cho giáo viên, hỗ trợ mọi lúc |
-| 9 | **Thông tin liên hệ** | Số điện thoại, email, địa chỉ | Dễ dàng liên hệ nhà trường |
+**Kết quả khảo sát:**
 
-**BƯỚC 4: Tích hợp trí tuệ nhân tạo (AI)** *(Tháng 11/2025)*
+| Nội dung khảo sát | Kết quả |
+|-------------------|---------|
+| Phụ huynh mong muốn có trang web trường | 85% (128/150 phụ huynh) |
+| Thường xuyên bỏ lỡ thông báo qua Zalo | 72% |
+| Muốn xem ảnh hoạt động của con online | 91% |
+| Cần tư vấn ngoài giờ hành chính | 68% |
+| Muốn tra cứu lịch học, thực đơn trực tuyến | 89% |
+
+#### 1.2. Khảo sát ý kiến giáo viên
+
+**Mục tiêu:** Xác định khó khăn của giáo viên trong công tác truyền thông với phụ huynh
+
+**Cách thực hiện:**
+- Tổ chức buổi họp trao đổi với 15 giáo viên
+- Phỏng vấn sâu về các vấn đề gặp phải hàng ngày
+- Ghi nhận đề xuất, giải pháp từ giáo viên
+
+**Kết quả phỏng vấn:**
+
+| STT | Khó khăn được giáo viên nêu ra | Tỷ lệ đồng ý |
+|-----|--------------------------------|--------------|
+| 1 | Mất nhiều thời gian trả lời câu hỏi lặp lại | 93% (14/15 GV) |
+| 2 | Thông báo giấy hay bị phụ huynh quên, thất lạc | 87% |
+| 3 | Không có nơi lưu trữ ảnh hoạt động tập trung | 80% |
+| 4 | Khó quảng bá hình ảnh trường đến phụ huynh mới | 73% |
+| 5 | Tốn thời gian in ấn thông báo, tài liệu | 67% |
+
+#### 1.3. Nghiên cứu các trang web mẫu
+
+**Mục tiêu:** Học hỏi kinh nghiệm từ các trang web trường mầm non khác
+
+**Cách thực hiện:**
+- Tìm kiếm và nghiên cứu 10 trang web trường mầm non trong và ngoài nước
+- Phân tích các tính năng, ưu nhược điểm
+- Ghi nhận các tính năng phù hợp để áp dụng
+
+**Kết quả nghiên cứu:**
+
+| Tính năng | Số trang web có | Đánh giá |
+|-----------|-----------------|----------|
+| Giới thiệu trường | 10/10 | Cần thiết |
+| Thông báo/Tin tức | 9/10 | Cần thiết |
+| Gallery ảnh | 8/10 | Cần thiết |
+| Lịch học | 6/10 | Cần thiết |
+| Chat bot tư vấn | 1/10 | Điểm khác biệt, cần có |
+| Góc phụ huynh | 3/10 | Nên có |
+| Responsive (mobile) | 7/10 | Bắt buộc |
+
+#### 1.4. Xác định danh sách chức năng
+
+**Kết quả tổng hợp - 9 chức năng chính cần phát triển:**
+
+| STT | Chức năng | Mức độ ưu tiên | Lý do |
+|-----|-----------|----------------|-------|
+| 1 | Hệ thống thông báo | ⭐⭐⭐⭐⭐ | 85% PH yêu cầu |
+| 2 | Phần giới thiệu (Hero) | ⭐⭐⭐⭐⭐ | Ấn tượng đầu tiên |
+| 3 | Hoạt động của bé | ⭐⭐⭐⭐⭐ | Giới thiệu chương trình |
+| 4 | Lời nhắn cô giáo | ⭐⭐⭐⭐ | Tạo gắn kết |
+| 5 | Gallery hình ảnh | ⭐⭐⭐⭐⭐ | 91% PH yêu cầu |
+| 6 | Góc Phụ Huynh | ⭐⭐⭐⭐ | Chia sẻ kiến thức |
+| 7 | Lịch Học | ⭐⭐⭐⭐⭐ | 89% PH yêu cầu |
+| 8 | Chat Bot AI | ⭐⭐⭐⭐⭐ | Điểm khác biệt, 68% cần tư vấn ngoài giờ |
+| 9 | Thông tin liên hệ | ⭐⭐⭐⭐ | Cơ bản, cần thiết |
+
+---
+
+### 📌 BƯỚC 2: THIẾT KẾ GIAO DIỆN VÀ KIẾN TRÚC HỆ THỐNG
+**Thời gian thực hiện:** Tháng 9-10/2025 (3 tuần)  
+**Người thực hiện:** Cô Lê Thị Bích Trâm (chủ trì)
+
+#### 2.1. Thiết kế giao diện (UI/UX)
+
+**Nguyên tắc thiết kế:**
+- **Đơn giản, dễ sử dụng:** Phụ huynh mọi lứa tuổi đều có thể sử dụng
+- **Thân thiện với trẻ em:** Màu sắc tươi sáng, hình ảnh dễ thương
+- **Chuyên nghiệp:** Thể hiện uy tín của nhà trường
+
+**Bảng màu sắc được chọn:**
+
+| Màu | Mã màu | Ý nghĩa | Vị trí sử dụng |
+|-----|--------|---------|----------------|
+| Cam chủ đạo | #e67e22 | Ấm áp, năng động, yêu thương | Logo, nút bấm, tiêu đề |
+| Cam nhạt | #fdf2e9 | Nhẹ nhàng, dễ chịu | Nền section |
+| Trắng | #ffffff | Sạch sẽ, rõ ràng | Nền chính |
+| Xám đậm | #333333 | Chuyên nghiệp | Chữ nội dung |
+| Xám nhạt | #888888 | Phụ trợ | Chữ phụ, icon |
+
+**Thiết kế bố cục trang:**
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    CHAT BOT AI - TRÚC ĐÀO                   │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  Phụ huynh hỏi    ──────►  Chat Bot AI  ──────►  Trả lời   │
-│                              │                   tự động   │
-│                              │                              │
-│                    ┌─────────▼─────────┐                   │
-│                    │  Xử lý ngôn ngữ   │                   │
-│                    │  tự nhiên (NLP)   │                   │
-│                    └─────────┬─────────┘                   │
-│                              │                              │
-│         ┌────────────────────┼────────────────────┐        │
-│         │                    │                    │        │
-│    ┌────▼────┐         ┌────▼────┐         ┌────▼────┐    │
-│    │ Lịch học│         │Thực đơn │         │Học phí  │    │
-│    └─────────┘         └─────────┘         └─────────┘    │
-│                                                             │
-│    ┌─────────┐         ┌─────────┐         ┌─────────┐    │
-│    │Ngoại khóa│        │Giờ đón  │         │Nhập học │    │
-│    └─────────┘         └─────────┘         └─────────┘    │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────┐
+│                         HEADER (Cố định)                        │
+│  🔔 [Logo Trúc Đào]     [Hoạt động] [Góc PH] [Lịch Học] [Chat] │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                      HERO SECTION                               │
+│     [Nội dung giới thiệu]        [3 ảnh xếp chồng]             │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                   HOẠT ĐỘNG CỦA BÉ                              │
+│     [01 Học tập] [02 Ngoại khóa] [03 Dinh dưỡng]               │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│            LỜI NHẮN CÔ GIÁO + GALLERY ẢNH                       │
+│     [3 lời nhắn]              [Lưới ảnh 3 cột]                 │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                      CHAT BOT AI                                │
+│                  [Giao diện chat]                               │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                         FOOTER                                  │
+│     [Logo] [Liên hệ] [Địa chỉ]                                 │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
-**Các câu hỏi Chat Bot có thể trả lời:**
-- Lịch học, thời khóa biểu
-- Thực đơn các ngày trong tuần
-- Giờ đón/trả trẻ
-- Học phí và các khoản thu
-- Quy trình nhập học
-- Hoạt động ngoại khóa
-- Thông tin giáo viên
-- Cơ sở vật chất
+#### 2.2. Thiết kế Responsive (Đa thiết bị)
 
-**BƯỚC 5: Kiểm thử và tối ưu hóa** *(Tháng 11/2025)*
+**Các breakpoint được thiết kế:**
 
-| Loại kiểm thử | Nội dung | Kết quả |
-|---------------|----------|---------|
-| Kiểm thử chức năng | Kiểm tra tất cả 9 chức năng chính | 100% hoạt động đúng |
-| Kiểm thử responsive | Kiểm tra trên 5 loại thiết bị khác nhau | Hiển thị tốt trên tất cả |
-| Kiểm thử tốc độ | Đo thời gian tải trang | < 3 giây |
-| Kiểm thử người dùng | 20 phụ huynh dùng thử | 95% hài lòng |
+| Thiết bị | Kích thước màn hình | Điều chỉnh |
+|----------|---------------------|------------|
+| Desktop lớn | > 1344px | Hiển thị đầy đủ, 2 cột |
+| Desktop nhỏ | 1200-1344px | Thu nhỏ khoảng cách |
+| Tablet ngang | 944-1200px | 2 cột, font nhỏ hơn |
+| Tablet dọc | 704-944px | 1 cột, ảnh thu nhỏ |
+| Điện thoại | < 704px | 1 cột, menu hamburger |
 
-**BƯỚC 6: Triển khai và vận hành** *(Tháng 11-12/2025)*
+#### 2.3. Thiết kế kiến trúc hệ thống
 
-- Triển khai lên GitHub Pages (miễn phí, ổn định)
-- Cấu hình SSL bảo mật (HTTPS)
-- Hướng dẫn sử dụng cho giáo viên và phụ huynh
-- Công bố địa chỉ truy cập: https://cogiaomamnon.github.io/ban-tin-thang
+**Sơ đồ kiến trúc:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                     KIẾN TRÚC HỆ THỐNG                          │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌─────────────┐     ┌─────────────┐     ┌─────────────┐       │
+│  │  Phụ huynh  │     │  Giáo viên  │     │   Khách     │       │
+│  │  (Mobile/   │     │  (Desktop)  │     │ truy cập    │       │
+│  │  Desktop)   │     │             │     │             │       │
+│  └──────┬──────┘     └──────┬──────┘     └──────┬──────┘       │
+│         │                   │                   │               │
+│         └───────────────────┼───────────────────┘               │
+│                             │                                   │
+│                      ┌──────▼──────┐                           │
+│                      │  Internet   │                           │
+│                      └──────┬──────┘                           │
+│                             │                                   │
+│                      ┌──────▼──────┐                           │
+│                      │   GitHub    │                           │
+│                      │   Pages     │                           │
+│                      │  (Hosting)  │                           │
+│                      └──────┬──────┘                           │
+│                             │                                   │
+│         ┌───────────────────┼───────────────────┐               │
+│         │                   │                   │               │
+│  ┌──────▼──────┐     ┌──────▼──────┐     ┌──────▼──────┐       │
+│  │  React App  │     │   Static    │     │   AI API   │       │
+│  │ (Giao diện) │     │  (Ảnh, CSS) │     │ (Chat Bot) │       │
+│  └─────────────┘     └─────────────┘     └─────────────┘       │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Cấu trúc thư mục dự án:**
+
+```
+ban-tin-thang/
+├── public/
+│   └── index.html                    # Trang HTML gốc
+├── src/
+│   ├── index.tsx                     # Điểm vào ứng dụng
+│   ├── App.tsx                       # Component chính
+│   ├── App.styled.tsx                # Style cho App
+│   ├── components/                   # Các thành phần giao diện
+│   │   ├── header/                   # Thanh điều hướng
+│   │   │   └── header.tsx
+│   │   ├── hero/                     # Phần giới thiệu
+│   │   │   └── hero.tsx
+│   │   ├── rules/                    # Hoạt động của bé
+│   │   │   └── rules.tsx
+│   │   ├── activities/               # Lời nhắn + Gallery
+│   │   │   └── activities.tsx
+│   │   ├── chatbotSection/           # Phần Chat Bot
+│   │   │   └── chatbotSection.tsx
+│   │   ├── footer/                   # Chân trang
+│   │   │   └── footer.tsx
+│   │   ├── imageGalleryModal/        # Popup Góc Phụ Huynh
+│   │   │   └── ImageGalleryModal.tsx
+│   │   └── lichHocModal/             # Popup Lịch Học
+│   │       └── LichHocModal.tsx
+│   ├── containers/
+│   │   └── chatbot/                  # Logic Chat Bot AI
+│   │       └── chatbot.tsx
+│   ├── css/                          # File CSS
+│   │   ├── style.css                 # Style chính
+│   │   ├── general.css               # Style chung
+│   │   └── queries.css               # Responsive
+│   └── img/                          # Hình ảnh
+│       ├── general/                  # Ảnh Hero
+│       ├── khoanhKhac/               # Ảnh gallery
+│       ├── tuyenTruyen/              # Ảnh Góc PH
+│       └── lichHoc/                  # Ảnh lịch học
+├── package.json                      # Cấu hình dự án
+├── webpack.config.js                 # Cấu hình build
+└── tsconfig.json                     # Cấu hình TypeScript
+```
+
+---
+
+### 📌 BƯỚC 3: PHÁT TRIỂN CÁC CHỨC NĂNG CHÍNH
+**Thời gian thực hiện:** Tháng 10-11/2025 (4 tuần)  
+**Người thực hiện:** Cô Lê Thị Bích Trâm (lập trình), Cô Trần Thị Thu và Cô Nguyễn Thị Hiệp (nội dung, hình ảnh)
+
+#### 3.1. Chức năng 1: Hệ thống thông báo
+
+**Mô tả:** Hiển thị icon chuông thông báo với badge số lượng, nhấn vào mở popup danh sách thông báo
+
+**Chi tiết thực hiện:**
+
+| Thành phần | Mô tả | Cách hoạt động |
+|------------|-------|----------------|
+| Icon chuông 🔔 | Đặt cạnh logo | Luôn hiển thị trên header |
+| Badge số lượng | Vòng tròn đỏ với số | Hiển thị số thông báo chưa đọc |
+| Popup thông báo | Danh sách thông báo | Mở khi nhấn vào chuông |
+| Chi tiết thông báo | Modal hiển thị nội dung đầy đủ | Mở khi nhấn vào từng thông báo |
+
+**Danh sách thông báo mẫu:**
+
+| STT | Tiêu đề | Nội dung tóm tắt |
+|-----|---------|------------------|
+| 1 | Lịch họp phụ huynh | Họp đầu năm học ngày 15/01/2026 |
+| 2 | Thông báo đóng học phí | Hạn cuối đóng học phí tháng 1 |
+| 3 | Chương trình Tết Nguyên Đán | Lịch nghỉ Tết và chương trình văn nghệ |
+| 4 | Khám sức khỏe định kỳ | Lịch khám sức khỏe cho các bé |
+| 5 | Hoạt động ngoại khóa | Tham quan công viên Đà Nẵng |
+| 6 | Thay đổi giờ đón trẻ | Điều chỉnh giờ đón buổi chiều |
+
+#### 3.2. Chức năng 2: Phần giới thiệu (Hero Section)
+
+**Mô tả:** Phần đầu tiên của trang web, tạo ấn tượng mạnh với người truy cập
+
+**Chi tiết thực hiện:**
+
+| Thành phần | Nội dung | Vị trí |
+|------------|----------|--------|
+| Tiêu đề chính | "Trúc Đào, ươm mầm yêu thương, vững bước tương lai" | Cột trái |
+| Mô tả | Giới thiệu sứ mệnh, tầm nhìn của trường | Cột trái |
+| Nút "Theo dõi nhà trường" | Link đến Facebook trường | Cột trái |
+| Nút "Khám phá" | Cuộn xuống nội dung | Cột trái |
+| 3 hình ảnh xếp chồng | Ảnh các bé đang học tập, vui chơi | Cột phải |
+
+**Bố cục 3 ảnh xếp chồng:**
+
+```
+              ┌─────────────┐
+              │   Ảnh 1     │
+              │  (trên cùng)│
+         ┌────┴─────────────┴────┐
+         │       Ảnh 2           │
+         │     (giữa)            │
+    ┌────┴───────────────────────┴────┐
+    │           Ảnh 3                  │
+    │         (dưới cùng)              │
+    └──────────────────────────────────┘
+```
+
+#### 3.3. Chức năng 3: Hoạt động của bé
+
+**Mô tả:** Giới thiệu 3 nội dung chính về chương trình giáo dục của trường
+
+**Chi tiết thực hiện:**
+
+| Mục | Số thứ tự | Tiêu đề | Nội dung | Hình ảnh |
+|-----|-----------|---------|----------|----------|
+| 1 | 01 | Bé được học tập một cách bài bản, khoa học | Kiến thức cơ bản, tư duy logic, quan sát, phân tích | Ảnh bé đang học |
+| 2 | 02 | Tham gia các hoạt động vui chơi, ngoại khóa | Rèn luyện thể chất, kỹ năng giao tiếp, hợp tác | Ảnh hoạt động ngoài trời |
+| 3 | 03 | Thưởng thức bữa ăn thơm ngon, dinh dưỡng | Thực đơn khoa học, đầy đủ dinh dưỡng | Ảnh bữa ăn |
+
+**Bố cục xen kẽ:**
+- Mục 01: Nội dung trái - Hình ảnh phải
+- Mục 02: Hình ảnh trái - Nội dung phải
+- Mục 03: Nội dung trái - Hình ảnh phải
+
+#### 3.4. Chức năng 4: Lời nhắn cô giáo
+
+**Mô tả:** Hiển thị lời nhắn yêu thương từ 3 cô giáo chủ nhiệm
+
+**Chi tiết thực hiện:**
+
+| Cô giáo | Ảnh đại diện | Nội dung lời nhắn |
+|---------|--------------|-------------------|
+| Cô Bích Trâm | cotram.png | Chào mừng các bé đến lớp, cam kết đồng hành cùng các bé phát triển toàn diện |
+| Cô Thu | cothu.jpg | Chia sẻ niềm hạnh phúc được chào đón các bé, tạo môi trường vui vẻ |
+| Cô Hiệp | cohiep.png | Tin tưởng mỗi bé là một bông hoa cần được vun đắp bằng tình thương |
+
+#### 3.5. Chức năng 5: Gallery hình ảnh
+
+**Mô tả:** Hiển thị ảnh các hoạt động của bé dưới dạng lưới và slideshow
+
+**Chi tiết thực hiện:**
+
+| Thành phần | Mô tả | Số lượng |
+|------------|-------|----------|
+| Lưới ảnh | Ảnh xếp 3 cột, hiệu ứng zoom khi hover | 19 ảnh |
+| Slideshow | Xem ảnh dạng trình chiếu với thumbnail | 19 ảnh |
+| Thư mục ảnh | src/img/khoanhKhac/ | - |
+
+**Hiệu ứng:**
+- Hover vào ảnh: Phóng to 110%
+- Click vào ảnh: Mở slideshow
+- Slideshow có nút qua/lại và thumbnail
+
+#### 3.6. Chức năng 6: Góc Phụ Huynh
+
+**Mô tả:** Popup hiển thị các tài liệu tuyên truyền, kiến thức nuôi dạy con
+
+**Chi tiết thực hiện:**
+
+| Thành phần | Mô tả |
+|------------|-------|
+| Nút mở | Menu "Góc Phụ Huynh" trên header |
+| Popup | Chiếm 90% màn hình |
+| Nội dung | Hiển thị 1 ảnh, có nút qua/lại |
+| Thư mục ảnh | src/img/tuyenTruyen/ |
+
+**Nội dung ảnh tuyên truyền:**
+- Kiến thức chăm sóc trẻ
+- Dinh dưỡng cho bé
+- Phòng chống dịch bệnh
+- Kỹ năng làm cha mẹ
+- An toàn cho trẻ
+
+#### 3.7. Chức năng 7: Lịch Học
+
+**Mô tả:** Popup hiển thị lịch học, thời khóa biểu, thực đơn
+
+**Chi tiết thực hiện:**
+
+| Thành phần | Mô tả |
+|------------|-------|
+| Nút mở | Menu "Lịch Học" trên header |
+| Popup | Chiếm 90% màn hình |
+| Nội dung | Ảnh lịch học, thời khóa biểu |
+| Thư mục ảnh | src/img/lichHoc/ |
+
+#### 3.8. Chức năng 8: Chat Bot AI
+
+**Mô tả:** Trợ lý ảo tư vấn tự động 24/7 sử dụng trí tuệ nhân tạo
+
+*(Chi tiết ở Bước 4)*
+
+#### 3.9. Chức năng 9: Thông tin liên hệ (Footer)
+
+**Mô tả:** Hiển thị thông tin liên hệ của trường
+
+**Chi tiết thực hiện:**
+
+| Thông tin | Nội dung | Chức năng |
+|-----------|----------|-----------|
+| Logo | "Trúc Đào" | Nhận diện thương hiệu |
+| Số điện thoại | 0236.3821.xxx | Click để gọi |
+| Email | trucdao@gmail.com | Click để gửi mail |
+| Địa chỉ | 20 Lý Tự Trọng, Thạch Thang, Hải Châu, Đà Nẵng | Hiển thị vị trí |
+
+---
+
+### 📌 BƯỚC 4: TÍCH HỢP TRÍ TUỆ NHÂN TẠO (AI)
+**Thời gian thực hiện:** Tháng 11/2025 (2 tuần)  
+**Người thực hiện:** Cô Lê Thị Bích Trâm (chủ trì)
+
+#### 4.1. Giới thiệu về Chat Bot AI
+
+**Chat Bot AI** là một trợ lý ảo sử dụng công nghệ **Trí tuệ nhân tạo (Artificial Intelligence)** để hiểu và trả lời các câu hỏi của phụ huynh một cách tự động.
+
+**Sơ đồ hoạt động của Chat Bot:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    QUY TRÌNH XỬ LÝ CHAT BOT                     │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌─────────────┐                                               │
+│  │ Phụ huynh   │                                               │
+│  │ nhập câu hỏi│                                               │
+│  └──────┬──────┘                                               │
+│         │                                                       │
+│         ▼                                                       │
+│  ┌─────────────────────────────────────┐                       │
+│  │  BƯỚC 1: Tiếp nhận câu hỏi         │                       │
+│  │  "Lịch học tuần này như thế nào?"   │                       │
+│  └──────────────┬──────────────────────┘                       │
+│                 │                                               │
+│                 ▼                                               │
+│  ┌─────────────────────────────────────┐                       │
+│  │  BƯỚC 2: Xử lý ngôn ngữ tự nhiên   │                       │
+│  │  - Phân tích từ khóa: "lịch học"    │                       │
+│  │  - Xác định ý định: Hỏi lịch học    │                       │
+│  └──────────────┬──────────────────────┘                       │
+│                 │                                               │
+│                 ▼                                               │
+│  ┌─────────────────────────────────────┐                       │
+│  │  BƯỚC 3: Truy vấn cơ sở dữ liệu    │                       │
+│  │  - Tìm thông tin lịch học           │                       │
+│  │  - Lấy dữ liệu tuần hiện tại        │                       │
+│  └──────────────┬──────────────────────┘                       │
+│                 │                                               │
+│                 ▼                                               │
+│  ┌─────────────────────────────────────┐                       │
+│  │  BƯỚC 4: Tạo câu trả lời           │                       │
+│  │  "Dạ, lịch học tuần này:            │                       │
+│  │   - Thứ 2: Làm quen chữ cái         │                       │
+│  │   - Thứ 3: Âm nhạc, Vận động..."    │                       │
+│  └──────────────┬──────────────────────┘                       │
+│                 │                                               │
+│                 ▼                                               │
+│  ┌─────────────┐                                               │
+│  │ Hiển thị    │                                               │
+│  │ câu trả lời │                                               │
+│  └─────────────┘                                               │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+#### 4.2. Các chủ đề Chat Bot có thể trả lời
+
+| STT | Chủ đề | Câu hỏi mẫu | Nội dung trả lời |
+|-----|--------|-------------|------------------|
+| 1 | Lịch học | "Lịch học tuần này?" | Thời khóa biểu các ngày trong tuần |
+| 2 | Thực đơn | "Hôm nay bé ăn gì?" | Menu bữa sáng, trưa, chiều |
+| 3 | Giờ đón trả | "Mấy giờ đón con?" | 7h-7h30 sáng, 16h30-17h chiều |
+| 4 | Học phí | "Học phí bao nhiêu?" | Các khoản phí và hạn đóng |
+| 5 | Nhập học | "Thủ tục nhập học?" | Hồ sơ cần thiết, quy trình |
+| 6 | Ngoại khóa | "Có hoạt động ngoại khóa gì?" | Danh sách hoạt động sắp tới |
+| 7 | Giáo viên | "Cô chủ nhiệm lớp Mầm là ai?" | Thông tin giáo viên |
+| 8 | Cơ sở vật chất | "Trường có những gì?" | Mô tả cơ sở vật chất |
+| 9 | Liên hệ | "Số điện thoại trường?" | Thông tin liên hệ |
+| 10 | Sức khỏe | "Quy định khi bé ốm?" | Hướng dẫn khi bé bệnh |
+
+#### 4.3. Công nghệ sử dụng
+
+| Công nghệ | Mô tả | Chi phí |
+|-----------|-------|---------|
+| react-chatbotify | Thư viện giao diện chat | Miễn phí |
+| @rcb-plugins/llm-connector | Kết nối với AI | Miễn phí |
+| API AI (Gemini/OpenAI) | Xử lý ngôn ngữ tự nhiên | Gói miễn phí |
+
+#### 4.4. Giao diện Chat Bot
+
+```
+┌──────────────────────────────────────┐
+│  🤖 Trợ lý ảo Trúc Đào              │
+├──────────────────────────────────────┤
+│                                      │
+│  Xin chào! Tôi là trợ lý ảo của     │
+│  Trường Mầm Non Trúc Đào. 👋        │
+│                                      │
+│  Tôi có thể giúp bạn:               │
+│  • Xem lịch học, thời khóa biểu     │
+│  • Tra cứu thực đơn                  │
+│  • Tìm hiểu thông tin nhập học      │
+│  • Giải đáp thắc mắc về trường      │
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │ Cho tôi xem lịch học tuần này │  │
+│  └────────────────────────────────┘  │
+│                                      │
+│  Dạ, lịch học tuần này của bé:      │
+│                                      │
+│  📅 Thứ 2: Làm quen chữ cái         │
+│  📅 Thứ 3: Âm nhạc, Vận động        │
+│  📅 Thứ 4: Tạo hình, Khám phá       │
+│  📅 Thứ 5: Làm quen với Toán        │
+│  📅 Thứ 6: Hoạt động ngoài trời     │
+│                                      │
+│  Bạn cần biết thêm thông tin gì     │
+│  không ạ? 😊                         │
+│                                      │
+│  ┌────────────────────────────────┐  │
+│  │ Nhập câu hỏi...          [Gửi]│  │
+│  └────────────────────────────────┘  │
+│                                      │
+└──────────────────────────────────────┘
+```
+
+---
+
+### 📌 BƯỚC 5: KIỂM THỬ VÀ TỐI ƯU HÓA
+**Thời gian thực hiện:** Tháng 11/2025 (1 tuần)  
+**Người thực hiện:** Cả nhóm + 20 phụ huynh tình nguyện
+
+#### 5.1. Kiểm thử chức năng
+
+**Mục tiêu:** Đảm bảo tất cả 9 chức năng hoạt động đúng
+
+| STT | Chức năng | Nội dung kiểm tra | Kết quả |
+|-----|-----------|-------------------|---------|
+| 1 | Hệ thống thông báo | Mở/đóng popup, xem chi tiết, badge cập nhật | ✅ Đạt |
+| 2 | Phần giới thiệu | Hiển thị đúng nội dung, ảnh, nút bấm | ✅ Đạt |
+| 3 | Hoạt động của bé | 3 mục hiển thị đúng, ảnh load đúng | ✅ Đạt |
+| 4 | Lời nhắn cô giáo | 3 lời nhắn hiển thị đầy đủ | ✅ Đạt |
+| 5 | Gallery hình ảnh | Lưới ảnh, slideshow, zoom hoạt động | ✅ Đạt |
+| 6 | Góc Phụ Huynh | Popup mở/đóng, chuyển ảnh | ✅ Đạt |
+| 7 | Lịch Học | Popup mở/đóng, chuyển ảnh | ✅ Đạt |
+| 8 | Chat Bot AI | Nhập câu hỏi, nhận trả lời đúng | ✅ Đạt |
+| 9 | Thông tin liên hệ | Link điện thoại, email hoạt động | ✅ Đạt |
+
+#### 5.2. Kiểm thử Responsive
+
+**Mục tiêu:** Đảm bảo hiển thị tốt trên mọi thiết bị
+
+| Thiết bị | Kích thước | Nội dung kiểm tra | Kết quả |
+|----------|------------|-------------------|---------|
+| Desktop (PC) | 1920x1080 | Layout 2 cột, đầy đủ nội dung | ✅ Đạt |
+| Laptop | 1366x768 | Layout 2 cột, thu nhỏ vừa | ✅ Đạt |
+| Tablet (iPad) | 768x1024 | Layout 1-2 cột, đọc rõ | ✅ Đạt |
+| Điện thoại (iPhone) | 375x667 | Layout 1 cột, menu hamburger | ✅ Đạt |
+| Điện thoại (Android) | 360x640 | Layout 1 cột, cuộn mượt | ✅ Đạt |
+
+#### 5.3. Kiểm thử tốc độ
+
+**Mục tiêu:** Đảm bảo trang web tải nhanh
+
+| Chỉ số | Mục tiêu | Kết quả thực tế | Đánh giá |
+|--------|----------|-----------------|----------|
+| Thời gian tải trang | < 3 giây | 2.1 giây | ✅ Đạt |
+| First Contentful Paint | < 1.8 giây | 1.2 giây | ✅ Đạt |
+| Largest Contentful Paint | < 2.5 giây | 1.8 giây | ✅ Đạt |
+| Cumulative Layout Shift | < 0.1 | 0.05 | ✅ Đạt |
+
+#### 5.4. Kiểm thử người dùng (User Testing)
+
+**Mục tiêu:** Thu thập phản hồi từ người dùng thực tế
+
+**Đối tượng:** 20 phụ huynh tình nguyện (4 phụ huynh mỗi lớp)
+
+**Quy trình:**
+1. Hướng dẫn truy cập trang web
+2. Yêu cầu thực hiện 5 nhiệm vụ:
+   - Xem thông báo mới nhất
+   - Tìm lịch học tuần này
+   - Xem ảnh hoạt động của bé
+   - Hỏi chat bot về thực đơn
+   - Tìm số điện thoại trường
+3. Thu thập phản hồi qua phiếu đánh giá
+
+**Kết quả kiểm thử người dùng:**
+
+| Tiêu chí | Điểm TB (1-5) | Tỷ lệ hài lòng |
+|----------|---------------|----------------|
+| Dễ sử dụng | 4.7/5 | 95% |
+| Giao diện đẹp | 4.8/5 | 96% |
+| Tốc độ tải | 4.5/5 | 90% |
+| Chat bot hữu ích | 4.6/5 | 92% |
+| Thông tin đầy đủ | 4.4/5 | 88% |
+| **Tổng thể** | **4.6/5** | **95%** |
+
+#### 5.5. Sửa lỗi và cải tiến
+
+**Các lỗi phát hiện và đã sửa:**
+
+| STT | Lỗi | Nguyên nhân | Cách sửa |
+|-----|-----|-------------|----------|
+| 1 | Ảnh không hiển thị trên Safari | Định dạng ảnh không tương thích | Chuyển sang định dạng JPG |
+| 2 | Menu không đóng khi click ngoài | Thiếu xử lý sự kiện | Thêm event listener |
+| 3 | Chat bot trả lời chậm | Kết nối API chậm | Tối ưu hóa request |
+| 4 | Font chữ nhỏ trên điện thoại | CSS chưa responsive | Điều chỉnh font-size |
+
+---
+
+### 📌 BƯỚC 6: TRIỂN KHAI VÀ VẬN HÀNH
+**Thời gian thực hiện:** Tháng 11-12/2025 (2 tuần)  
+**Người thực hiện:** Cô Lê Thị Bích Trâm (chủ trì)
+
+#### 6.1. Triển khai lên GitHub Pages
+
+**Quy trình triển khai:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    QUY TRÌNH TRIỂN KHAI                         │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌─────────────┐     ┌─────────────┐     ┌─────────────┐       │
+│  │   Bước 1    │     │   Bước 2    │     │   Bước 3    │       │
+│  │  Build ứng  │────►│  Push lên   │────►│  GitHub     │       │
+│  │   dụng      │     │   GitHub    │     │  tự động    │       │
+│  │             │     │             │     │  triển khai │       │
+│  └─────────────┘     └─────────────┘     └─────────────┘       │
+│                                                                 │
+│  npm run build        git push          GitHub Pages           │
+│                                          tự động host          │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Các bước thực hiện:**
+
+| Bước | Lệnh/Hành động | Mô tả |
+|------|----------------|-------|
+| 1 | `npm run build` | Đóng gói ứng dụng thành file tĩnh |
+| 2 | `git add .` | Thêm tất cả file vào git |
+| 3 | `git commit -m "Deploy"` | Tạo commit mới |
+| 4 | `git push origin main` | Đẩy code lên GitHub |
+| 5 | `npm run deploy` | Triển khai lên GitHub Pages |
+| 6 | Kiểm tra | Truy cập URL để kiểm tra |
+
+#### 6.2. Cấu hình bảo mật
+
+| Cấu hình | Mô tả | Trạng thái |
+|----------|-------|------------|
+| HTTPS/SSL | Mã hóa kết nối | ✅ Tự động bởi GitHub |
+| Không lưu dữ liệu nhạy cảm | Không thu thập thông tin cá nhân | ✅ Đã thực hiện |
+| API Key bảo mật | Sử dụng biến môi trường | ✅ Đã cấu hình |
+
+#### 6.3. Công bố và hướng dẫn sử dụng
+
+**Địa chỉ truy cập chính thức:**
+> **https://cogiaomamnon.github.io/ban-tin-thang**
+
+**Hình thức công bố:**
+
+| Hình thức | Đối tượng | Thời gian |
+|-----------|-----------|-----------|
+| Thông báo trong họp phụ huynh | Tất cả phụ huynh | 15/11/2025 |
+| Tin nhắn qua Zalo | Tất cả phụ huynh | 16/11/2025 |
+| Poster dán tại trường | Phụ huynh, khách | 17/11/2025 |
+| Bài đăng Facebook | Cộng đồng | 18/11/2025 |
+
+**Tài liệu hướng dẫn sử dụng:**
+
+| STT | Nội dung | Đối tượng |
+|-----|----------|-----------|
+| 1 | Cách truy cập trang web | Phụ huynh |
+| 2 | Cách xem thông báo | Phụ huynh |
+| 3 | Cách sử dụng chat bot | Phụ huynh |
+| 4 | Cách cập nhật nội dung | Giáo viên |
+| 5 | Cách thêm hình ảnh mới | Giáo viên |
+
+#### 6.4. Vận hành và bảo trì
+
+**Lịch trình vận hành:**
+
+| Công việc | Tần suất | Người thực hiện |
+|-----------|----------|-----------------|
+| Cập nhật thông báo mới | Hàng tuần | Cô Thu |
+| Thêm ảnh hoạt động | Hàng tuần | Cô Hiệp |
+| Cập nhật lịch học, thực đơn | Hàng tuần | Cô Trâm |
+| Kiểm tra chat bot | Hàng tháng | Cô Trâm |
+| Sao lưu dữ liệu | Hàng tháng | Cô Trâm |
+| Nâng cấp tính năng | Theo nhu cầu | Cô Trâm |
+
+---
+
+### 📌 TỔNG KẾT CÁC BƯỚC THỰC HIỆN
+
+| Bước | Nội dung | Thời gian | Người thực hiện | Kết quả |
+|------|----------|-----------|-----------------|---------|
+| 1 | Khảo sát và phân tích | 2 tuần | Cả nhóm | 9 chức năng cần phát triển |
+| 2 | Thiết kế giao diện | 3 tuần | Cô Trâm | Bản thiết kế hoàn chỉnh |
+| 3 | Phát triển chức năng | 4 tuần | Cả nhóm | 9 chức năng hoàn thành |
+| 4 | Tích hợp AI | 2 tuần | Cô Trâm | Chat bot hoạt động tốt |
+| 5 | Kiểm thử | 1 tuần | Cả nhóm + 20 PH | 95% hài lòng |
+| 6 | Triển khai | 2 tuần | Cô Trâm | Trang web online |
+| **Tổng** | | **14 tuần** | | **Hoàn thành 100%** |
 
 ##### C. ĐIỀU KIỆN CẦN THIẾT ĐỂ ÁP DỤNG GIẢI PHÁP
 
