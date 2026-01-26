@@ -201,349 +201,125 @@ Popup chiếm chín mươi phần trăm màn hình và hiển thị các ảnh l
 
 #### 3.8. Chức năng 8: Chat Bot AI lớp Nhỡ
 
-**Mô tả:** Trợ lý ảo tư vấn tự động 24/7 sử dụng trí tuệ nhân tạo, trả lời câu hỏi về lớp Nhỡ
-
-*(Chi tiết ở Bước 4)*
+Chi tiết về chức năng Chat Bot sẽ được trình bày kỹ lưỡng trong Bước 4 dưới đây, đây là tính năng đặc biệt và là điểm nhấn quan trọng nhất của sáng kiến.
 
 #### 3.9. Chức năng 9: Thông tin liên hệ lớp Nhỡ (Footer)
 
-**Mô tả:** Hiển thị thông tin liên hệ của lớp Nhỡ và trường
-
-**Chi tiết thực hiện:**
-
-| Thông tin | Nội dung | Chức năng |
-|-----------|----------|-----------|
-| Logo | "Trúc Đào" - Lớp Nhỡ | Nhận diện thương hiệu |
-| Số điện thoại | 0236.3821.xxx | Click để gọi liên hệ lớp Nhỡ |
-| Email | trucdao@gmail.com | Click để gửi mail |
-| Địa chỉ | 20 Lý Tự Trọng, Thạch Thang, Hải Châu, Đà Nẵng | Hiển thị vị trí |
+Phần cuối cùng của trang web là footer, nơi hiển thị đầy đủ thông tin liên hệ của lớp Nhỡ và trường. Logo "Trúc Đào - Lớp Nhỡ" được đặt nổi bật giúp củng cố nhận diện thương hiệu. Số điện thoại 0236.3821.xxx được thiết kế thành link có thể nhấn, khi phụ huynh nhấn vào trên điện thoại sẽ tự động mở ứng dụng gọi điện để liên hệ trực tiếp với lớp Nhỡ. Tương tự, địa chỉ email trucdao@gmail.com cũng là link có thể nhấn để mở ứng dụng email và soạn thư gửi cho giáo viên. Địa chỉ 20 Lý Tự Trọng, Thạch Thang, Hải Châu, Đà Nẵng được hiển thị rõ ràng để phụ huynh biết vị trí của trường.
 
 ---
 
 ### 📌 BƯỚC 4: TÍCH HỢP TRÍ TUỆ NHÂN TẠO (AI)
-**Thời gian thực hiện:** Tháng 11/2025 (2 tuần)  
-**Người thực hiện:** Cô Lê Thị Bích Trâm - Giáo viên chủ nhiệm lớp Nhỡ
+
+Đây là bước đột phá và là điểm nhấn khác biệt nhất của sáng kiến, kéo dài hai tuần vào tháng mười một năm hai nghìn hai mươi lăm, do cô Lê Thị Bích Trâm thực hiện.
 
 #### 4.1. Giới thiệu về Chat Bot AI cho lớp Nhỡ
 
-**Chat Bot AI** là một trợ lý ảo sử dụng công nghệ **Trí tuệ nhân tạo (Artificial Intelligence)** để hiểu và trả lời các câu hỏi của phụ huynh lớp Nhỡ một cách tự động.
+Chat Bot AI không chỉ đơn thuần là một công cụ trả lời tự động, mà là một trợ lý ảo thông minh được xây dựng dựa trên công nghệ Trí tuệ nhân tạo tiên tiến. Nó có khả năng hiểu ngôn ngữ tự nhiên của con người và đưa ra những câu trả lời phù hợp về các thông tin liên quan đến lớp Nhỡ.
 
-**Sơ đồ hoạt động của Chat Bot:**
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    QUY TRÌNH XỬ LÝ CHAT BOT                     │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  ┌─────────────┐                                               │
-│  │ Phụ huynh   │                                               │
-│  │ nhập câu hỏi│                                               │
-│  └──────┬──────┘                                               │
-│         │                                                       │
-│         ▼                                                       │
-│  ┌─────────────────────────────────────┐                       │
-│  │  BƯỚC 1: Tiếp nhận câu hỏi         │                       │
-│  │  "Lịch học tuần này như thế nào?"   │                       │
-│  └──────────────┬──────────────────────┘                       │
-│                 │                                               │
-│                 ▼                                               │
-│  ┌─────────────────────────────────────┐                       │
-│  │  BƯỚC 2: Xử lý ngôn ngữ tự nhiên   │                       │
-│  │  - Phân tích từ khóa: "lịch học"    │                       │
-│  │  - Xác định ý định: Hỏi lịch học    │                       │
-│  └──────────────┬──────────────────────┘                       │
-│                 │                                               │
-│                 ▼                                               │
-│  ┌─────────────────────────────────────┐                       │
-│  │  BƯỚC 3: Truy vấn cơ sở dữ liệu    │                       │
-│  │  - Tìm thông tin lịch học           │                       │
-│  │  - Lấy dữ liệu tuần hiện tại        │                       │
-│  └──────────────┬──────────────────────┘                       │
-│                 │                                               │
-│                 ▼                                               │
-│  ┌─────────────────────────────────────┐                       │
-│  │  BƯỚC 4: Tạo câu trả lời           │                       │
-│  │  "Dạ, lịch học tuần này:            │                       │
-│  │   - Thứ 2: Làm quen chữ cái         │                       │
-│  │   - Thứ 3: Âm nhạc, Vận động..."    │                       │
-│  └──────────────┬──────────────────────┘                       │
-│                 │                                               │
-│                 ▼                                               │
-│  ┌─────────────┐                                               │
-│  │ Hiển thị    │                                               │
-│  │ câu trả lời │                                               │
-│  └─────────────┘                                               │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
+Quy trình hoạt động của Chat Bot diễn ra qua bốn bước chính. Bước đầu tiên là tiếp nhận câu hỏi từ phụ huynh, ví dụ như "Lịch học tuần này như thế nào?". Bước thứ hai, hệ thống sẽ xử lý ngôn ngữ tự nhiên bằng cách phân tích các từ khóa trong câu hỏi như "lịch học" và xác định ý định thực sự của người hỏi là muốn biết thông tin về lịch học. Bước thứ ba, hệ thống truy vấn cơ sở dữ liệu để tìm thông tin lịch học và lấy dữ liệu của tuần hiện tại. Cuối cùng ở bước thứ tư, Chat Bot tạo ra một câu trả lời hoàn chỉnh và thân thiện, ví dụ: "Dạ, lịch học tuần này bao gồm: Thứ Hai là làm quen chữ cái, Thứ Ba là âm nhạc và vận động..." rồi hiển thị câu trả lời đó cho phụ huynh.
 
 #### 4.2. Các chủ đề Chat Bot lớp Nhỡ có thể trả lời
 
-| STT | Chủ đề | Câu hỏi mẫu | Nội dung trả lời |
-|-----|--------|-------------|------------------|
-| 1 | Lịch học lớp Nhỡ | "Lịch học tuần này của lớp Nhỡ?" | Thời khóa biểu các ngày trong tuần của lớp Nhỡ |
-| 2 | Thực đơn lớp Nhỡ | "Hôm nay bé lớp Nhỡ ăn gì?" | Menu bữa sáng, trưa, chiều |
-| 3 | Giờ đón trả lớp Nhỡ | "Mấy giờ đón con lớp Nhỡ?" | 7h-7h30 sáng, 16h30-17h chiều |
-| 4 | Học phí lớp Nhỡ | "Học phí lớp Nhỡ bao nhiêu?" | Các khoản phí và hạn đóng |
-| 5 | Chương trình lớp Nhỡ | "Chương trình học lớp Nhỡ gồm gì?" | Chương trình giáo dục trẻ 4-5 tuổi |
-| 6 | Ngoại khóa lớp Nhỡ | "Lớp Nhỡ có hoạt động ngoại khóa gì?" | Danh sách hoạt động sắp tới |
-| 7 | Giáo viên lớp Nhỡ | "Cô chủ nhiệm lớp Nhỡ là ai?" | Thông tin 3 cô giáo lớp Nhỡ |
-| 8 | Cơ sở vật chất | "Lớp Nhỡ có những gì?" | Mô tả cơ sở vật chất lớp học |
-| 9 | Liên hệ lớp Nhỡ | "Số điện thoại lớp Nhỡ?" | Thông tin liên hệ giáo viên |
-| 10 | Sức khỏe trẻ 4-5 tuổi | "Quy định khi bé lớp Nhỡ ốm?" | Hướng dẫn khi bé bệnh |
+Chúng tôi đã lập trình Chat Bot có khả năng trả lời mười chủ đề chính liên quan đến lớp Nhỡ. Về lịch học, khi phụ huynh hỏi "Lịch học tuần này của lớp Nhỡ?", bot sẽ cung cấp thời khóa biểu chi tiết của từng ngày trong tuần. Về thực đơn, câu hỏi "Hôm nay bé lớp Nhỡ ăn gì?" sẽ được trả lời với menu của ba bữa sáng, trưa và chiều. Về giờ đón trả, câu hỏi "Mấy giờ đón con lớp Nhỡ?" sẽ nhận được thông tin từ bảy giờ đến bảy giờ ba mươi sáng và từ bốn giờ ba mươi đến năm giờ chiều.
+
+Về học phí, bot có thể giải đáp "Học phí lớp Nhỡ bao nhiêu?" với thông tin về các khoản phí và hạn đóng. Về chương trình học, câu hỏi "Chương trình học lớp Nhỡ gồm gì?" sẽ được trả lời với thông tin về chương trình giáo dục dành cho trẻ bốn đến năm tuổi. Về hoạt động ngoại khóa, "Lớp Nhỡ có hoạt động ngoại khóa gì?" sẽ nhận được danh sách các hoạt động sắp diễn ra.
+
+Bot cũng có thể trả lời về đội ngũ giáo viên khi được hỏi "Cô chủ nhiệm lớp Nhỡ là ai?", cung cấp thông tin về ba cô giáo. Về cơ sở vật chất, câu hỏi "Lớp Nhỡ có những gì?" sẽ nhận được mô tả chi tiết về trang thiết bị của lớp học. Thông tin liên hệ cũng được bot cung cấp nhanh chóng khi phụ huynh hỏi "Số điện thoại lớp Nhỡ?". Và cuối cùng, về sức khỏe trẻ, câu hỏi "Quy định khi bé lớp Nhỡ ốm?" sẽ được giải đáp với hướng dẫn cụ thể khi bé bị bệnh.
 
 #### 4.3. Công nghệ sử dụng
 
-| Công nghệ | Mô tả | Chi phí |
-|-----------|-------|---------|
-| react-chatbotify | Thư viện giao diện chat | Miễn phí |
-| @rcb-plugins/llm-connector | Kết nối với AI | Miễn phí |
-| API AI (Gemini/OpenAI) | Xử lý ngôn ngữ tự nhiên | Gói miễn phí |
+Để xây dựng Chat Bot, chúng tôi sử dụng ba công nghệ chính, tất cả đều hoàn toàn miễn phí. Thư viện react-chatbotify cung cấp giao diện chat đẹp mắt và dễ sử dụng. Plugin @rcb-plugins/llm-connector giúp kết nối với các dịch vụ trí tuệ nhân tạo. Và API AI từ Gemini hoặc OpenAI với gói miễn phí được sử dụng để xử lý ngôn ngữ tự nhiên, giúp bot hiểu và trả lời các câu hỏi một cách thông minh.
 
 #### 4.4. Giao diện Chat Bot lớp Nhỡ
 
-```
-┌──────────────────────────────────────┐
-│  🤖 Trợ lý ảo Lớp Nhỡ - Trúc Đào    │
-├──────────────────────────────────────┤
-│                                      │
-│  Xin chào! Tôi là trợ lý ảo của     │
-│  Lớp Nhỡ - Trường MN Trúc Đào. 👋   │
-│                                      │
-│  Tôi có thể giúp bạn:               │
-│  • Xem lịch học, thời khóa biểu     │
-│    lớp Nhỡ                          │
-│  • Tra cứu thực đơn lớp Nhỡ         │
-│  • Tìm hiểu chương trình trẻ 4-5    │
-│    tuổi                             │
-│  • Giải đáp thắc mắc về lớp Nhỡ     │
-│                                      │
-│  ┌────────────────────────────────┐  │
-│  │ Cho tôi xem lịch học lớp Nhỡ  │  │
-│  │ tuần này                       │  │
-│  └────────────────────────────────┘  │
-│                                      │
-│  Dạ, lịch học tuần này của lớp Nhỡ: │
-│                                      │
-│  📅 Thứ 2: Làm quen chữ cái         │
-│  📅 Thứ 3: Âm nhạc, Vận động        │
-│  📅 Thứ 4: Tạo hình, Khám phá       │
-│  📅 Thứ 5: Làm quen với Toán        │
-│  📅 Thứ 6: Hoạt động ngoài trời     │
-│                                      │
-│  Bạn cần biết thêm thông tin gì     │
-│  về lớp Nhỡ không ạ? 😊             │
-│                                      │
-│  ┌────────────────────────────────┐  │
-│  │ Nhập câu hỏi...          [Gửi]│  │
-│  └────────────────────────────────┘  │
-│                                      │
-└──────────────────────────────────────┘
-```
+Giao diện Chat Bot được thiết kế thân thiện và dễ sử dụng. Ở phần trên cùng là tiêu đề "Trợ lý ảo Lớp Nhỡ - Trúc Đào" cùng với icon robot dễ thương. Khi mới mở, bot chào hỏi "Xin chào! Tôi là trợ lý ảo của Lớp Nhỡ - Trường MN Trúc Đào" và giới thiệu những gì mình có thể giúp đỡ, bao gồm xem lịch học và thời khóa biểu, tra cứu thực đơn, tìm hiểu chương trình cho trẻ bốn đến năm tuổi, và giải đáp các thắc mắc về lớp Nhỡ.
+
+Khi phụ huynh nhập câu hỏi như "Cho tôi xem lịch học lớp Nhỡ tuần này", bot sẽ trả lời một cách lịch sự và chi tiết: "Dạ, lịch học tuần này của lớp Nhỡ:" kèm theo danh sách các môn học từng ngày với biểu tượng lịch. Sau đó bot còn thân thiện hỏi thêm "Bạn cần biết thêm thông tin gì về lớp Nhỡ không ạ?" với biểu tượng mặt cười, tạo không khí thoải mái cho cuộc hội thoại. Ở cuối cùng là ô nhập liệu "Nhập câu hỏi..." với nút "Gửi" để phụ huynh có thể tiếp tục đặt câu hỏi.
 
 ---
 
 ### 📌 BƯỚC 5: KIỂM THỬ VÀ TỐI ƯU HÓA
-**Thời gian thực hiện:** Tháng 11/2025 (1 tuần)  
-**Người thực hiện:** 3 giáo viên lớp Nhỡ + 15 phụ huynh lớp Nhỡ tình nguyện
+
+Sau khi hoàn thành phát triển, chúng tôi dành một tuần vào tháng mười một năm hai nghìn hai mươi lăm để kiểm thử kỹ lưỡng với sự tham gia của ba giáo viên lớp Nhỡ và mười lăm phụ huynh tình nguyện.
 
 #### 5.1. Kiểm thử chức năng
 
-**Mục tiêu:** Đảm bảo tất cả 9 chức năng hoạt động đúng
+Mục tiêu của giai đoạn này là đảm bảo tất cả chín chức năng đều hoạt động đúng như thiết kế. Chúng tôi kiểm tra hệ thống thông báo với việc mở đóng popup, xem chi tiết và cập nhật badge - kết quả đạt yêu cầu. Phần giới thiệu được kiểm tra xem có hiển thị đúng nội dung, ảnh và các nút bấm không - cũng đạt. Ba mục trong phần hoạt động của bé được kiểm tra xem có hiển thị đúng và ảnh có load đúng không - kết quả tốt. Ba lời nhắn từ các cô giáo đều hiển thị đầy đủ - đạt yêu cầu.
 
-| STT | Chức năng | Nội dung kiểm tra | Kết quả |
-|-----|-----------|-------------------|---------|
-| 1 | Hệ thống thông báo | Mở/đóng popup, xem chi tiết, badge cập nhật | ✅ Đạt |
-| 2 | Phần giới thiệu | Hiển thị đúng nội dung, ảnh, nút bấm | ✅ Đạt |
-| 3 | Hoạt động của bé | 3 mục hiển thị đúng, ảnh load đúng | ✅ Đạt |
-| 4 | Lời nhắn cô giáo | 3 lời nhắn hiển thị đầy đủ | ✅ Đạt |
-| 5 | Gallery hình ảnh | Lưới ảnh, slideshow, zoom hoạt động | ✅ Đạt |
-| 6 | Góc Phụ Huynh | Popup mở/đóng, chuyển ảnh | ✅ Đạt |
-| 7 | Lịch Học | Popup mở/đóng, chuyển ảnh | ✅ Đạt |
-| 8 | Chat Bot AI | Nhập câu hỏi, nhận trả lời đúng | ✅ Đạt |
-| 9 | Thông tin liên hệ | Link điện thoại, email hoạt động | ✅ Đạt |
+Gallery hình ảnh với lưới ảnh, slideshow và hiệu ứng zoom đều hoạt động trơn tru - đạt. Góc Phụ Huynh và Lịch Học, cả hai popup đều mở đóng và chuyển ảnh mượt mà - đạt. Chat Bot AI quan trọng nhất được kiểm tra kỹ lưỡng, từ việc nhập câu hỏi đến nhận câu trả lời chính xác - hoàn toàn đạt yêu cầu. Và cuối cùng, các link điện thoại và email trong phần liên hệ đều hoạt động tốt - đạt.
 
 #### 5.2. Kiểm thử Responsive
 
-**Mục tiêu:** Đảm bảo hiển thị tốt trên mọi thiết bị
+Để đảm bảo trang web hiển thị tốt trên mọi thiết bị, chúng tôi kiểm tra trên năm loại màn hình khác nhau. Trên desktop lớn với độ phân giải 1920x1080, trang web hiển thị layout hai cột đầy đủ nội dung - đạt yêu cầu. Laptop với màn hình 1366x768 cũng giữ được layout hai cột với kích thước thu nhỏ vừa phải - đạt. Tablet iPad với độ phân giải 768x1024 chuyển sang layout một đến hai cột, chữ vẫn đọc rõ - đạt.
 
-| Thiết bị | Kích thước | Nội dung kiểm tra | Kết quả |
-|----------|------------|-------------------|---------|
-| Desktop (PC) | 1920x1080 | Layout 2 cột, đầy đủ nội dung | ✅ Đạt |
-| Laptop | 1366x768 | Layout 2 cột, thu nhỏ vừa | ✅ Đạt |
-| Tablet (iPad) | 768x1024 | Layout 1-2 cột, đọc rõ | ✅ Đạt |
-| Điện thoại (iPhone) | 375x667 | Layout 1 cột, menu hamburger | ✅ Đạt |
-| Điện thoại (Android) | 360x640 | Layout 1 cột, cuộn mượt | ✅ Đạt |
+iPhone với màn hình 375x667 chuyển hoàn toàn sang layout một cột với menu dạng hamburger, tất cả đều hiển thị và hoạt động tốt - đạt. Và điện thoại Android với màn hình nhỏ 360x640 cũng hiển thị layout một cột, cuộn trang mượt mà - đạt yêu cầu.
 
 #### 5.3. Kiểm thử tốc độ
 
-**Mục tiêu:** Đảm bảo trang web tải nhanh
-
-| Chỉ số | Mục tiêu | Kết quả thực tế | Đánh giá |
-|--------|----------|-----------------|----------|
-| Thời gian tải trang | < 3 giây | 2.1 giây | ✅ Đạt |
-| First Contentful Paint | < 1.8 giây | 1.2 giây | ✅ Đạt |
-| Largest Contentful Paint | < 2.5 giây | 1.8 giây | ✅ Đạt |
-| Cumulative Layout Shift | < 0.1 | 0.05 | ✅ Đạt |
+Tốc độ tải trang là yếu tố quan trọng ảnh hưởng đến trải nghiệm người dùng. Chúng tôi đo lường bốn chỉ số quan trọng. Thời gian tải toàn bộ trang được đặt mục tiêu dưới ba giây, kết quả thực tế đạt hai phẩy một giây - đạt xuất sắc. First Contentful Paint, tức thời gian hiển thị nội dung đầu tiên, mục tiêu dưới một phẩy tám giây và kết quả đạt một phẩy hai giây - rất tốt. Largest Contentful Paint, thời gian hiển thị phần tử lớn nhất, mục tiêu dưới hai phẩy năm giây và đạt một phẩy tám giây - xuất sắc. Cumulative Layout Shift, đo độ ổn định bố cục, mục tiêu dưới không phẩy một và đạt không phẩy không năm - hoàn hảo.
 
 #### 5.4. Kiểm thử người dùng (User Testing)
 
-**Mục tiêu:** Thu thập phản hồi từ phụ huynh lớp Nhỡ thực tế
+Để thu thập phản hồi thực tế, chúng tôi mời mười lăm phụ huynh lớp Nhỡ tình nguyện tham gia kiểm thử. Quy trình bao gồm ba bước: hướng dẫn họ truy cập trang web, yêu cầu thực hiện năm nhiệm vụ cụ thể, và thu thập phản hồi qua phiếu đánh giá.
 
-**Đối tượng:** 15 phụ huynh lớp Nhỡ tình nguyện
+Năm nhiệm vụ kiểm thử bao gồm: xem thông báo mới nhất của lớp Nhỡ, tìm lịch học tuần này, xem ảnh hoạt động của bé, hỏi chat bot về thực đơn, và tìm số điện thoại liên hệ. Kết quả kiểm thử rất tích cực với năm tiêu chí được đánh giá.
 
-**Quy trình:**
-1. Hướng dẫn phụ huynh lớp Nhỡ truy cập trang web
-2. Yêu cầu thực hiện 5 nhiệm vụ:
-   - Xem thông báo mới nhất của lớp Nhỡ
-   - Tìm lịch học tuần này của lớp Nhỡ
-   - Xem ảnh hoạt động của bé lớp Nhỡ
-   - Hỏi chat bot về thực đơn lớp Nhỡ
-   - Tìm số điện thoại liên hệ lớp Nhỡ
-3. Thu thập phản hồi qua phiếu đánh giá
-
-**Kết quả kiểm thử người dùng:**
-
-| Tiêu chí | Điểm TB (1-5) | Tỷ lệ hài lòng |
-|----------|---------------|----------------|
-| Dễ sử dụng | 4.8/5 | 96% |
-| Giao diện đẹp | 4.7/5 | 95% |
-| Tốc độ tải | 4.6/5 | 92% |
-| Chat bot hữu ích | 4.7/5 | 94% |
-| Thông tin lớp Nhỡ đầy đủ | 4.5/5 | 90% |
-| **Tổng thể** | **4.7/5** | **96%** |
+Về độ dễ sử dụng, điểm trung bình đạt bốn phẩy tám trên năm với tỷ lệ hài lòng chín mươi sáu phần trăm. Giao diện đẹp được đánh giá bốn phẩy bảy trên năm với chín mươi lăm phần trăm hài lòng. Tốc độ tải trang đạt bốn phẩy sáu trên năm với chín mươi hai phần trăm hài lòng. Tính hữu ích của chat bot được đánh giá bốn phẩy bảy trên năm với chín mươi bốn phần trăm hài lòng. Và mức độ đầy đủ thông tin về lớp Nhỡ đạt bốn phẩy năm trên năm với chín mươi phần trăm hài lòng. Tổng thể, trang web đạt điểm bốn phẩy bảy trên năm với tỷ lệ hài lòng chín mươi sáu phần trăm - một kết quả rất đáng khích lệ.
 
 #### 5.5. Sửa lỗi và cải tiến
 
-**Các lỗi phát hiện và đã sửa:**
+Trong quá trình kiểm thử, chúng tôi phát hiện và khắc phục bốn lỗi chính. Lỗi đầu tiên là ảnh không hiển thị trên trình duyệt Safari do định dạng ảnh không tương thích, chúng tôi đã chuyển toàn bộ sang định dạng JPG để giải quyết. Lỗi thứ hai là menu không tự động đóng khi người dùng nhấn ra ngoài vùng menu do thiếu xử lý sự kiện, chúng tôi đã thêm event listener để khắc phục.
 
-| STT | Lỗi | Nguyên nhân | Cách sửa |
-|-----|-----|-------------|----------|
-| 1 | Ảnh không hiển thị trên Safari | Định dạng ảnh không tương thích | Chuyển sang định dạng JPG |
-| 2 | Menu không đóng khi click ngoài | Thiếu xử lý sự kiện | Thêm event listener |
-| 3 | Chat bot trả lời chậm | Kết nối API chậm | Tối ưu hóa request |
-| 4 | Font chữ nhỏ trên điện thoại | CSS chưa responsive | Điều chỉnh font-size |
+Lỗi thứ ba là chat bot đôi khi trả lời chậm do kết nối API không được tối ưu, chúng tôi đã cải thiện cách gửi request để tăng tốc độ phản hồi. Và lỗi cuối cùng là font chữ hiển thị hơi nhỏ trên điện thoại do CSS chưa được điều chỉnh responsive đầy đủ, chúng tôi đã tăng font-size phù hợp cho màn hình nhỏ.
 
 ---
 
 ### 📌 BƯỚC 6: TRIỂN KHAI VÀ VẬN HÀNH
-**Thời gian thực hiện:** Tháng 11-12/2025 (2 tuần)  
-**Người thực hiện:** Cô Lê Thị Bích Trâm - Giáo viên chủ nhiệm lớp Nhỡ
+
+Giai đoạn cuối cùng kéo dài hai tuần từ cuối tháng mười một đến giữa tháng mười hai năm hai nghìn hai mươi lăm, do cô Lê Thị Bích Trâm thực hiện.
 
 #### 6.1. Triển khai lên GitHub Pages
 
-**Quy trình triển khai:**
+Quy trình triển khai trang web lên môi trường thực tế diễn ra qua ba giai đoạn chính. Giai đoạn đầu tiên là build ứng dụng, chúng tôi chạy lệnh "npm run build" để đóng gói toàn bộ mã nguồn thành các file tĩnh tối ưu. Giai đoạn thứ hai là đẩy code lên GitHub, sử dụng các lệnh git để cập nhật repository. Và giai đoạn cuối cùng, GitHub Pages tự động nhận diện và triển khai trang web, khiến nó có thể truy cập được từ Internet.
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    QUY TRÌNH TRIỂN KHAI                         │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  ┌─────────────┐     ┌─────────────┐     ┌─────────────┐       │
-│  │   Bước 1    │     │   Bước 2    │     │   Bước 3    │       │
-│  │  Build ứng  │────►│  Push lên   │────►│  GitHub     │       │
-│  │   dụng      │     │   GitHub    │     │  tự động    │       │
-│  │             │     │             │     │  triển khai │       │
-│  └─────────────┘     └─────────────┘     └─────────────┘       │
-│                                                                 │
-│  npm run build        git push          GitHub Pages           │
-│                                          tự động host          │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-**Các bước thực hiện:**
-
-| Bước | Lệnh/Hành động | Mô tả |
-|------|----------------|-------|
-| 1 | `npm run build` | Đóng gói ứng dụng thành file tĩnh |
-| 2 | `git add .` | Thêm tất cả file vào git |
-| 3 | `git commit -m "Deploy"` | Tạo commit mới |
-| 4 | `git push origin main` | Đẩy code lên GitHub |
-| 5 | `npm run deploy` | Triển khai lên GitHub Pages |
-| 6 | Kiểm tra | Truy cập URL để kiểm tra |
+Cụ thể, chúng tôi thực hiện sáu bước chi tiết. Bước một, chạy lệnh "npm run build" để đóng gói ứng dụng thành các file tĩnh HTML, CSS và JavaScript. Bước hai, chạy "git add ." để thêm tất cả file thay đổi vào staging area. Bước ba, chạy "git commit -m 'Deploy'" để tạo một commit mới ghi nhận những thay đổi. Bước bốn, chạy "git push origin main" để đẩy code lên nhánh chính trên GitHub. Bước năm, chạy "npm run deploy" để kích hoạt quá trình triển khai tự động lên GitHub Pages. Và bước sáu, truy cập vào URL https://cogiaomamnon.github.io/ban-tin-thang để kiểm tra xem trang web đã hoạt động đúng chưa.
 
 #### 6.2. Cấu hình bảo mật
 
-| Cấu hình | Mô tả | Trạng thái |
-|----------|-------|------------|
-| HTTPS/SSL | Mã hóa kết nối | ✅ Tự động bởi GitHub |
-| Không lưu dữ liệu nhạy cảm | Không thu thập thông tin cá nhân | ✅ Đã thực hiện |
-| API Key bảo mật | Sử dụng biến môi trường | ✅ Đã cấu hình |
+Về mặt bảo mật, chúng tôi đảm bảo ba yếu tố quan trọng. Thứ nhất, giao thức HTTPS và chứng chỉ SSL được GitHub Pages tự động cung cấp và cấu hình, đảm bảo mọi kết nối đều được mã hóa an toàn. Thứ hai, chúng tôi cam kết không thu thập hay lưu trữ bất kỳ dữ liệu nhạy cảm nào từ phụ huynh, trang web chỉ hiển thị thông tin công khai của lớp Nhỡ. Thứ ba, các API key cần thiết cho chat bot được bảo vệ bằng cách sử dụng biến môi trường, không để lộ ra ngoài mã nguồn công khai.
 
 #### 6.3. Công bố và hướng dẫn sử dụng
 
-**Địa chỉ truy cập chính thức trang web lớp Nhỡ:**
-> **https://cogiaomamnon.github.io/ban-tin-thang**
+Địa chỉ chính thức của trang web lớp Nhỡ là https://cogiaomamnon.github.io/ban-tin-thang. Để công bố trang web đến toàn thể phụ huynh và cộng đồng, chúng tôi sử dụng bốn hình thức khác nhau.
 
-**Hình thức công bố:**
+Ngày mười lăm tháng mười một năm hai nghìn hai mươi lăm, trong buổi họp phụ huynh đầu năm học, chúng tôi trực tiếp thông báo và giới thiệu trang web đến ba mươi lăm phụ huynh của lớp Nhỡ. Ngày hôm sau, mười sáu tháng mười một, chúng tôi gửi tin nhắn chi tiết kèm link truy cập qua nhóm Zalo của lớp. Ngày mười bảy tháng mười một, một poster lớn in đẹp với mã QR để quét và truy cập trang web được dán tại góc thông báo của lớp Nhỡ. Và ngày mười tám tháng mười một, chúng tôi chia sẻ link trang web lên trang Facebook chính thức của trường để lan tỏa đến cộng đồng rộng hơn.
 
-| Hình thức | Đối tượng | Thời gian |
-|-----------|-----------|-----------|
-| Thông báo trong họp phụ huynh lớp Nhỡ | 35 phụ huynh lớp Nhỡ | 15/11/2025 |
-| Tin nhắn qua Zalo nhóm lớp Nhỡ | Phụ huynh lớp Nhỡ | 16/11/2025 |
-| Poster dán tại lớp Nhỡ | Phụ huynh lớp Nhỡ | 17/11/2025 |
-| Chia sẻ lên Facebook trường | Cộng đồng | 18/11/2025 |
-
-**Tài liệu hướng dẫn sử dụng:**
-
-| STT | Nội dung | Đối tượng |
-|-----|----------|-----------|
-| 1 | Cách truy cập trang web lớp Nhỡ | Phụ huynh lớp Nhỡ |
-| 2 | Cách xem thông báo lớp Nhỡ | Phụ huynh lớp Nhỡ |
-| 3 | Cách sử dụng chat bot lớp Nhỡ | Phụ huynh lớp Nhỡ |
-| 4 | Cách cập nhật nội dung lớp Nhỡ | 3 giáo viên lớp Nhỡ |
-| 5 | Cách thêm hình ảnh lớp Nhỡ mới | 3 giáo viên lớp Nhỡ |
+Chúng tôi cũng chuẩn bị năm tài liệu hướng dẫn sử dụng chi tiết. Tài liệu thứ nhất hướng dẫn phụ huynh lớp Nhỡ cách truy cập trang web từ điện thoại và máy tính. Tài liệu thứ hai hướng dẫn cách xem các thông báo mới nhất của lớp. Tài liệu thứ ba hướng dẫn cách sử dụng chat bot để hỏi đáp về các vấn đề liên quan đến lớp Nhỡ. Tài liệu thứ tư dành cho ba giáo viên, hướng dẫn cách cập nhật nội dung mới như thông báo, lịch học hay thực đơn. Và tài liệu thứ năm cũng dành cho giáo viên, hướng dẫn cách thêm hình ảnh mới vào gallery để chia sẻ các hoạt động của các bé lớp Nhỡ.
 
 #### 6.4. Vận hành và bảo trì
 
-**Lịch trình vận hành trang web lớp Nhỡ:**
+Để duy trì hoạt động ổn định và cập nhật thường xuyên, chúng tôi thiết lập lịch trình vận hành rõ ràng với sự phân công cụ thể cho từng người. Hàng tuần, cô Thu sẽ đảm nhận việc cập nhật các thông báo mới của lớp Nhỡ lên trang web. Cũng hàng tuần, cô Hiệp sẽ chọn lọc và thêm những bức ảnh đẹp về hoạt động của các bé vào gallery. Cô Trâm, với vai trò chủ nhiệm, sẽ cập nhật lịch học và thực đơn mỗi tuần để phụ huynh luôn có thông tin mới nhất.
 
-| Công việc | Tần suất | Người thực hiện |
-|-----------|----------|-----------------|
-| Cập nhật thông báo lớp Nhỡ mới | Hàng tuần | Cô Thu |
-| Thêm ảnh hoạt động lớp Nhỡ | Hàng tuần | Cô Hiệp |
-| Cập nhật lịch học, thực đơn lớp Nhỡ | Hàng tuần | Cô Trâm |
-| Kiểm tra chat bot | Hàng tháng | Cô Trâm |
-| Sao lưu dữ liệu | Hàng tháng | Cô Trâm |
-| Nâng cấp tính năng | Theo nhu cầu | Cô Trâm |
+Hàng tháng, cô Trâm sẽ kiểm tra hoạt động của chat bot, đảm bảo nó vẫn trả lời chính xác và nhanh chóng. Cũng hàng tháng, cô sẽ thực hiện sao lưu toàn bộ dữ liệu của trang web để phòng trường hợp có sự cố xảy ra. Và khi có nhu cầu hoặc phản hồi từ phụ huynh, chúng tôi sẽ họp bàn để nâng cấp và bổ sung các tính năng mới cho trang web, đảm bảo nó luôn đáp ứng tốt nhất nhu cầu của lớp Nhỡ.
 
 ---
 
 ### 📌 TỔNG KẾT CÁC BƯỚC THỰC HIỆN
 
-| Bước | Nội dung | Thời gian | Người thực hiện | Kết quả |
-|------|----------|-----------|-----------------|---------|
-| 1 | Khảo sát và phân tích | 2 tuần | 3 giáo viên lớp Nhỡ | 9 chức năng cần phát triển |
-| 2 | Thiết kế giao diện | 3 tuần | Cô Trâm | Bản thiết kế hoàn chỉnh |
-| 3 | Phát triển chức năng | 4 tuần | 3 giáo viên lớp Nhỡ | 9 chức năng hoàn thành |
-| 4 | Tích hợp AI | 2 tuần | Cô Trâm | Chat bot lớp Nhỡ hoạt động tốt |
-| 5 | Kiểm thử | 1 tuần | 3 GV + 15 PH lớp Nhỡ | 96% hài lòng |
-| 6 | Triển khai | 2 tuần | Cô Trâm | Trang web lớp Nhỡ online |
-| **Tổng** | | **14 tuần** | | **Hoàn thành 100%** |
+Nhìn lại toàn bộ hành trình từ ý tưởng đến hiện thực, chúng tôi đã trải qua sáu bước quan trọng trong tổng cộng mười bốn tuần. Bước đầu tiên, khảo sát và phân tích nhu cầu trong hai tuần với sự tham gia của cả ba giáo viên lớp Nhỡ, mang lại kết quả là danh sách chín chức năng cần phát triển. Bước thứ hai, thiết kế giao diện trong ba tuần do cô Trâm thực hiện, tạo ra bản thiết kế hoàn chỉnh và đẹp mắt.
+
+Bước thứ ba, phát triển chức năng trong bốn tuần với sự hợp tác của cả ba giáo viên, hoàn thành đầy đủ chín chức năng đã đề ra. Bước thứ tư, tích hợp trí tuệ nhân tạo trong hai tuần do cô Trâm đảm nhận, tạo ra chat bot lớp Nhỡ hoạt động hiệu quả. Bước thứ năm, kiểm thử trong một tuần với sự tham gia của ba giáo viên và mười lăm phụ huynh, đạt được tỷ lệ hài lòng chín mươi sáu phần trăm. Và bước cuối cùng, triển khai và vận hành trong hai tuần do cô Trâm thực hiện, đưa trang web lớp Nhỡ chính thức lên mạng. Tất cả các bước đều hoàn thành một trăm phần trăm, đánh dấu sự thành công của sáng kiến.
 
 ##### C. ĐIỀU KIỆN CẦN THIẾT ĐỂ ÁP DỤNG GIẢI PHÁP
 
-**Về nhân lực:**
+Để triển khai sáng kiến này, các đơn vị khác cần đáp ứng một số điều kiện cơ bản về nhân lực, thiết bị và phần mềm.
 
-| Vai trò | Số lượng | Yêu cầu |
-|---------|----------|---------|
-| Người phát triển | 1 | Có kiến thức cơ bản về lập trình web |
-| Người phụ trách nội dung | 1-2 | Giáo viên, biết sử dụng máy tính |
-| Người quản trị | 1 | Biết cập nhật thông tin, hình ảnh |
+**Về nhân lực**, cần có một người phát triển có kiến thức cơ bản về lập trình web, có thể là giáo viên am hiểu công nghệ hoặc thuê chuyên gia bên ngoài hỗ trợ. Cần một đến hai người phụ trách nội dung, thường là giáo viên, biết sử dụng máy tính cơ bản để soạn thảo văn bản và chọn ảnh. Và cần một người quản trị biết cách cập nhật thông tin và hình ảnh lên trang web, có thể là giáo viên chủ nhiệm hoặc người được giao nhiệm vụ.
 
-**Về thiết bị và phần mềm:**
+**Về thiết bị và phần mềm**, cần có máy tính với kết nối Internet ổn định, thường các trường học đã có sẵn. Cần điện thoại thông minh để kiểm tra tính năng responsive của trang web, đây cũng là thiết bị mà hầu hết giáo viên đều sở hữu. Về phần mềm, Node.js là môi trường cần thiết để phát triển ứng dụng, hoàn toàn miễn phí và dễ cài đặt. Visual Studio Code là trình soạn thảo mã nguồn mà chúng tôi khuyên dùng, cũng miễn phí. Git là công cụ quản lý mã nguồn, miễn phí và dễ học. Và cuối cùng cần một tài khoản GitHub để host trang web, đăng ký và sử dụng hoàn toàn miễn phí.
 
-| Hạng mục | Yêu cầu | Chi phí |
-|----------|---------|---------|
-| Máy tính | Có kết nối internet | Đã có sẵn |
-| Điện thoại | Để kiểm tra responsive | Đã có sẵn |
-| Node.js | Phần mềm phát triển | Miễn phí |
-| Visual Studio Code | Trình soạn thảo code | Miễn phí |
-| Git | Quản lý mã nguồn | Miễn phí |
-| Tài khoản GitHub | Host trang web | Miễn phí |
-
-**Tổng chi phí triển khai: 0 đồng** (sử dụng hoàn toàn công nghệ mã nguồn mở và nền tảng miễn phí)
+Điều đáng nói nhất là tổng chi phí để triển khai sáng kiến này là không đồng, bằng không, vì chúng tôi sử dụng hoàn toàn các công nghệ mã nguồn mở và nền tảng hosting miễn phí. Đây là một lợi thế lớn giúp sáng kiến có thể được nhân rộng đến mọi trường học mà không gây gánh nặng về tài chính.
 
 ##### D. HÌNH ẢNH MINH HỌA CÁC CHỨC NĂNG
 
@@ -781,25 +557,15 @@ Sau hơn hai tháng triển khai và vận hành trang web lớp Nhỡ, chúng t
 
 ### 3. Ý kiến của Phụ huynh lớp Nhỡ
 
-> *"Tôi rất thích tính năng thông báo trên website lớp Nhỡ. Trước đây hay bị bỏ lỡ thông báo trong nhóm Zalo vì tin nhắn quá nhiều, thông tin bị trôi. Giờ vào website lớp Nhỡ là thấy ngay những thông báo quan trọng với số badge hiển thị rõ ràng. Rất tiện lợi cho việc theo dõi hoạt động của con!"*
->
-> **Anh Nguyễn Văn Minh**  
-> *Phụ huynh bé Nguyễn Gia Hân, lớp Nhỡ*  
-> Ngày 15/01/2026
+Các bậc phụ huynh lớp Nhỡ cũng gửi đến chúng tôi nhiều lời nhận xét tích cực. Anh Nguyễn Văn Minh, phụ huynh của bé Nguyễn Gia Hân trong lớp Nhỡ, chia sẻ vào ngày mười lăm tháng một: "Tôi rất thích tính năng thông báo trên website lớp Nhỡ. Trước đây hay bị bỏ lỡ thông báo trong nhóm Zalo vì tin nhắn quá nhiều, thông tin bị trôi. Giờ vào website lớp Nhỡ là thấy ngay những thông báo quan trọng với số badge hiển thị rõ ràng. Rất tiện lợi cho việc theo dõi hoạt động của con!"
 
-> *"Chat bot trả lời rất nhanh và chính xác về lớp Nhỡ. Tôi thường hỏi về thực đơn, lịch học của lớp Nhỡ vào buổi tối khi các cô đã về, rất tiện lợi. Con tôi cũng thích xem ảnh hoạt động của mình tại lớp Nhỡ trên trang web cùng bố mẹ."*
->
-> **Chị Lê Thị Hương**  
-> *Phụ huynh bé Lê Minh Khôi, lớp Nhỡ*  
-> Ngày 16/01/2026
+Chị Lê Thị Hương, phụ huynh của bé Lê Minh Khôi lớp Nhỡ, phản hồi vào ngày mười sáu tháng một: "Chat bot trả lời rất nhanh và chính xác về lớp Nhỡ. Tôi thường hỏi về thực đơn, lịch học của lớp Nhỡ vào buổi tối khi các cô đã về, rất tiện lợi. Con tôi cũng thích xem ảnh hoạt động của mình tại lớp Nhỡ trên trang web cùng bố mẹ."
 
-> *"Trang web lớp Nhỡ rất đẹp và dễ sử dụng. Tôi có thể xem trên điện thoại bất cứ lúc nào. Đặc biệt phần giới thiệu về 3 cô giáo lớp Nhỡ giúp tôi hiểu hơn về người đang chăm sóc con mình hàng ngày. Cảm ơn các cô đã tạo ra trang web hữu ích cho lớp Nhỡ!"*
->
-> **Chị Trần Thị Mai**  
-> *Phụ huynh bé Trần Gia Bảo, lớp Nhỡ*  
-> Ngày 17/01/2026
+Và chị Trần Thị Mai, phụ huynh của bé Trần Gia Bảo lớp Nhỡ, nói vào ngày mười bảy tháng một: "Trang web lớp Nhỡ rất đẹp và dễ sử dụng. Tôi có thể xem trên điện thoại bất cứ lúc nào. Đặc biệt phần giới thiệu về 3 cô giáo lớp Nhỡ giúp tôi hiểu hơn về người đang chăm sóc con mình hàng ngày. Cảm ơn các cô đã tạo ra trang web hữu ích cho lớp Nhỡ!"
 
 ### 4. Bảng tổng hợp đánh giá
+
+Kết quả tổng hợp từ khảo sát cho thấy mức độ hài lòng rất cao. Hai thành viên Ban Giám Hiệu được khảo sát đều hài lòng một trăm phần trăm và đề xuất nhân rộng cho các lớp khác. Ba giáo viên lớp Nhỡ cũng hài lòng một trăm phần trăm và đồng ý với việc nhân rộng. Ba mươi phụ huynh lớp Nhỡ được khảo sát có chín mươi sáu phần trăm hài lòng và cũng đề xuất nhân rộng. Tổng cộng ba mươi lăm người tham gia khảo sát, mức độ hài lòng trung bình là chín mươi bảy phần trăm, và một trăm phần trăm đều đồng ý nhân rộng sáng kiến này.
 
 | Đối tượng | Số lượng khảo sát | Mức độ hài lòng | Đề xuất nhân rộng |
 |-----------|-------------------|-----------------|-------------------|
