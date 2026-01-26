@@ -19,7 +19,7 @@
 
 | STT | Họ và tên | Ngày tháng năm sinh | Chức vụ | Trình độ chuyên môn | Đơn vị công tác | Tỷ lệ đóng góp (%) |
 |-----|-----------|---------------------|---------|---------------------|-----------------|-------------------|
-| 1 | Lê Thị Bích Trâm | 15/03/1985 | Giáo viên chủ nhiệm lớp Nhỡ | Đại học Sư phạm Mầm non | Lớp Nhỡ - Trường MN Trúc Đào | 40% |
+| 1 | Lê Thị Bích Trâm | 15/07/1994 | Giáo viên chủ nhiệm lớp Nhỡ | Đại học Sư phạm Mầm non | Lớp Nhỡ - Trường MN Trúc Đào | 40% |
 | 2 | Trần Thị Thu | 22/08/1990 | Giáo viên lớp Nhỡ | Đại học Sư phạm Mầm non | Lớp Nhỡ - Trường MN Trúc Đào | 30% |
 | 3 | Nguyễn Thị Hiệp | 10/12/1988 | Giáo viên lớp Nhỡ | Cao đẳng Sư phạm Mầm non | Lớp Nhỡ - Trường MN Trúc Đào | 30% |
 
