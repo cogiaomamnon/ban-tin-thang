@@ -2,6 +2,7 @@ import {Header, Logo} from "../../App.styled";
 import React, {useState} from "react";
 import {ImageGalleryModal} from "../imageGalleryModal/ImageGalleryModal";
 import {LichHocModal} from "../lichHocModal/LichHocModal";
+import {ThucDonModal} from "../thucDonModal/ThucDonModal";
 import styled from "styled-components";
 
 const LogoContainer = styled.div`
@@ -325,6 +326,7 @@ const DetailSectionText = styled.p`
 export const HeaderSection = () => {
 	const [isGocPhuHuynhModalOpen, setIsGocPhuHuynhModalOpen] = useState(false);
 	const [isLichHocModalOpen, setIsLichHocModalOpen] = useState(false);
+	const [isThucDonModalOpen, setIsThucDonModalOpen] = useState(false);
 	const [isNotificationModalOpen, setIsNotificationModalOpen] = useState(false);
 	const [selectedNotification, setSelectedNotification] = useState<number | null>(null);
 
@@ -336,6 +338,11 @@ export const HeaderSection = () => {
 	const handleLichHocClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
 		e.preventDefault();
 		setIsLichHocModalOpen(true);
+	};
+
+	const handleThucDonClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+		e.preventDefault();
+		setIsThucDonModalOpen(true);
 	};
 
 	const handleNotificationClick = () => {
@@ -547,6 +554,9 @@ export const HeaderSection = () => {
 							<a href="#" onClick={handleLichHocClick} className="main-nav-link">Lịch Học</a>
 						</li>
 						<li className="main-nav-item">
+							<a href="#" onClick={handleThucDonClick} className="main-nav-link">Thực Đơn</a>
+						</li>
+						<li className="main-nav-item">
 							<a href="#chatbot" className="main-nav-link">Chat bot</a>
 						</li>
 						<li className="main-nav-item">
@@ -578,6 +588,7 @@ export const HeaderSection = () => {
 
 			<ImageGalleryModal isOpen={isGocPhuHuynhModalOpen} onClose={() => setIsGocPhuHuynhModalOpen(false)}/>
 			<LichHocModal isOpen={isLichHocModalOpen} onClose={() => setIsLichHocModalOpen(false)}/>
+			<ThucDonModal isOpen={isThucDonModalOpen} onClose={() => setIsThucDonModalOpen(false)}/>
 
 			{selectedNotification && notificationDetails[selectedNotification] && (
 				<NotificationDetailModal isOpen={true}>
