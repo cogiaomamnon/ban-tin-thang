@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+// @ts-ignore
+import tuan1Img from "../../img/thucDon/tuan1.png";
+// @ts-ignore
+import tuan2Img from "../../img/thucDon/tuan2.png";
+// @ts-ignore
+import tuan3Img from "../../img/thucDon/tuan3.png";
+// @ts-ignore
+import tuan4Img from "../../img/thucDon/tuan4.png";
+
 interface ThucDonModalProps {
 	isOpen: boolean;
 	onClose: () => void;
@@ -219,497 +228,52 @@ const HolidayCell = styled(TableCell)`
 	font-style: italic;
 `;
 
+const MenuImage = styled.img`
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+	border-radius: 0.5rem;
+`;
+
+const ImageContainer = styled.div`
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: auto;
+	padding: 1rem;
+`;
+
 // Dữ liệu thực đơn theo tuần
 const menuData = {
-	thang12: {
-		title: "THỰC ĐƠN TUẦN IV THÁNG 12",
-		days: [
-			{
-				day: "Hai",
-				date: "29/12",
-				sang: {
-					bua_sang: "Soup bột thịt",
-					nua_buoi: "Sữa",
-					com_chau: "Sữa hạt/ Cháo thịt bò bí đỏ",
-				},
-				trua: {
-					com: "Cơm/ Cháo",
-					mon_chinh: "Gà xào nấm",
-					canh: "Canh bầu xương",
-					trang_mieng: "Đu đủ",
-					mon_chinh_nho: "Cháo/ Nui gà",
-				},
-				xanh: {
-					bua_phu: "Chè đậu đen",
-					sua: "Sữa"
-				}
-			},
-			{
-				day: "Ba",
-				date: "30/12",
-				sang: {
-					bua_sang: "Soup bột bò",
-					nua_buoi: "Sữa hạt",
-					com_chau: "Sữa hạt/ Cháo thịt xay xốt cà",
-				},
-				trua: {
-					com: "Cơm/ Cháo",
-					mon_chinh: "Cá chiên giòn",
-					canh: "Canh cải thảo",
-					trang_mieng: "Thanh long",
-					mon_chinh_nho: "Cháo cá/ Nui bò",
-				},
-				xanh: {
-					bua_phu: "Bánh bông lan nướng",
-					sua: "Sữa"
-				}
-			},
-			{
-				day: "Tư",
-				date: "31/12",
-				sang: {
-					bua_sang: "Soup bột Elise",
-					nua_buoi: "Cháo bột",
-					com_chau: "Sữa/ Bánh canh",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Tiệc buffet",
-					canh: "",
-					trang_mieng: "",
-					mon_chinh_nho: "Tiệc buffet",
-				},
-				xanh: {
-					bua_phu: "Bánh custar",
-					sua: "Elise"
-				}
-			},
-			{
-				day: "Năm",
-				date: "1/1",
-				holiday: "NGHỈ LỄ"
-			}
-		]
-	},
 	tuan1: {
 		title: "THỰC ĐƠN TUẦN 1",
-		days: [
-			{
-				day: "Hai",
-				date: "5/1",
-				sang: {
-					bua_sang: "Hủ tiếu",
-					nua_buoi: "Sữa hạt/ Elise",
-					com_chau: "Cháo thịt (Vịm thái)",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Canh xương, Sườn chiên xả",
-					canh: "Canh",
-					trang_mieng: "Chùm ruột",
-					mon_chinh_nho: "Sữa hạt/ Cháo thịt xay",
-				},
-				xanh: {
-					bua_phu: "Sữa hạt/ Cháo thịt đậu",
-					sua: "Sữa hạt Elise"
-				}
-			},
-			{
-				day: "Ba",
-				date: "6/1",
-				sang: {
-					bua_sang: "Soup bột thịt",
-					nua_buoi: "Sữa hạt/ Elise",
-					com_chau: "Cháo Ếch Bí trứng",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Sườn kho, Canh mùng",
-					canh: "Canh",
-					trang_mieng: "Ổi",
-					mon_chinh_nho: "Sữa hạt/ Cháo thịt",
-				},
-				xanh: {
-					bua_phu: "Sữa hạt/ Cháo thịt bí đỏ",
-					sua: "Sữa hạt Elise"
-				}
-			},
-			{
-				day: "Tư",
-				date: "7/1",
-				sang: {
-					bua_sang: "Súp Ếch là Chanh",
-					nua_buoi: "Sữa hạt/ Elise",
-					com_chau: "Cháo tôm rau mầm",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Cá xốt chua ngọt, Rau luộc",
-					canh: "Canh tôm",
-					trang_mieng: "Dưa hấu",
-					mon_chinh_nho: "Sữa hạt/ Cháo cá",
-				},
-				xanh: {
-					bua_phu: "Sữa hạt/ Cháo thịt",
-					sua: "Sữa hạt Elise"
-				}
-			},
-			{
-				day: "Năm",
-				date: "8/1",
-				sang: {
-					bua_sang: "Cháo lòng",
-					nua_buoi: "Sữa hạt/ Elise",
-					com_chau: "Cháo thịt",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Thịt kho tiêu, Canh bắp cải",
-					canh: "Canh",
-					trang_mieng: "Chuối",
-					mon_chinh_nho: "Sữa hạt/ Cháo thịt",
-				},
-				xanh: {
-					bua_phu: "Sữa hạt/ Cháo thịt bí",
-					sua: "Sữa hạt Elise"
-				}
-			},
-			{
-				day: "Sáu",
-				date: "9/1",
-				sang: {
-					bua_sang: "Cháo",
-					nua_buoi: "Sữa hạt/ Elise",
-					com_chau: "Cháo",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Đậu hũ nhồi thịt, Canh mồng tơi",
-					canh: "Canh",
-					trang_mieng: "Xoài",
-					mon_chinh_nho: "Sữa hạt/ Cháo thịt",
-				},
-				xanh: {
-					bua_phu: "Mụi bò, Sữa hạt",
-					sua: "Sữa hạt Elise"
-				}
-			}
-		]
+		isImage: true,
+		image: tuan1Img,
+		days: []
 	},
 	tuan2: {
 		title: "THỰC ĐƠN TUẦN 2",
-		days: [
-			{
-				day: "Hai",
-				date: "12/1",
-				sang: {
-					bua_sang: "Bánh mì trứng",
-					nua_buoi: "Sữa hạt/ Sữa hạt",
-					com_chau: "Cháo thịt",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Canh xương, Thịt luộc",
-					canh: "Canh",
-					trang_mieng: "Ếch xào Sữa hạt/ Sữa hạt",
-					mon_chinh_nho: "Sữa hạt/ Cháo thịt",
-				},
-				xanh: {
-					bua_phu: "Sữa hạt/ Cháo thịt",
-					sua: "Sữa hạt Elise"
-				}
-			},
-			{
-				day: "Ba",
-				date: "13/1",
-				sang: {
-					bua_sang: "Cháo Ếch bí",
-					nua_buoi: "Sữa hạt/ Sữa hạt",
-					com_chau: "Soup bột/ Ca kho",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Cá kho Sữa hạt/ Luộc Sữa hạt",
-					canh: "Canh",
-					trang_mieng: "Chuối",
-					mon_chinh_nho: "Cháo cá 12 tháng",
-				},
-				xanh: {
-					bua_phu: "Sữa hạt/ Cháo thịt",
-					sua: "Sữa hạt Elise"
-				}
-			},
-			{
-				day: "Tư",
-				date: "14/1",
-				sang: {
-					bua_sang: "Soup bột/ Sữa hạt",
-					nua_buoi: "Sữa hạt/ Sữa hạt",
-					com_chau: "Cháo sườn/ Sữa hạt",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Sườn kho Sữa hạt/ Sữa hạt Canh",
-					canh: "Canh",
-					trang_mieng: "Dưa hấu",
-					mon_chinh_nho: "Cháo sườn Sữa hạt",
-				},
-				xanh: {
-					bua_phu: "Sữa hạt/ Cháo thịt",
-					sua: "Sữa hạt Elise"
-				}
-			},
-			{
-				day: "Năm",
-				date: "15/1",
-				sang: {
-					bua_sang: "Sữa hạt/ Sữa hạt",
-					nua_buoi: "Sữa hạt/ Sữa hạt",
-					com_chau: "Cháo gà",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Gà kho Sữa hạt/ Sữa hạt Canh",
-					canh: "Canh bí đao",
-					trang_mieng: "Chuối",
-					mon_chinh_nho: "Cháo gà Sữa hạt",
-				},
-				xanh: {
-					bua_phu: "Chè Sữa hạt đậu",
-					sua: "Sữa hạt Elise"
-				}
-			},
-			{
-				day: "Sáu",
-				date: "16/1",
-				sang: {
-					bua_sang: "Sữa hạt/ Sữa hạt",
-					nua_buoi: "Sữa hạt/ Sữa hạt",
-					com_chau: "Cháo bò Sữa hạt",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Bò xào Sữa hạt/ Sữa hạt Canh",
-					canh: "Canh mướp",
-					trang_mieng: "Xoài",
-					mon_chinh_nho: "Cháo bò Sữa hạt",
-				},
-				xanh: {
-					bua_phu: "Chè thập cẩm Sữa hạt",
-					sua: "Sữa hạt Elise"
-				}
-			},
-			{
-				day: "Bảy",
-				date: "17/1",
-				sang: {
-					bua_sang: "Sữa hạt/ Cháo thập cẩm",
-					nua_buoi: "",
-					com_chau: "",
-				},
-				trua: {
-					com: "",
-					mon_chinh: "",
-					canh: "",
-					trang_mieng: "",
-					mon_chinh_nho: "",
-				},
-				xanh: {
-					bua_phu: "",
-					sua: ""
-				}
-			}
-		]
+		isImage: true,
+		image: tuan2Img,
+		days: []
 	},
 	tuan3: {
 		title: "THỰC ĐƠN TUẦN 3 THÁNG 1",
-		days: [
-			{
-				day: "Hai",
-				date: "19/1",
-				sang: {
-					bua_sang: "Báo khéo",
-					nua_buoi: "Sữa hạt/ Elise",
-					com_chau: "Canh bột bún/ Bún thịt/ Mở vịt",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Canh xương, Bầu tôm",
-					canh: "Canh",
-					trang_mieng: "Chuối",
-					mon_chinh_nho: "Cháo thịt/ Sữa hạt/ Elise",
-				},
-				xanh: {
-					bua_phu: "Sữa hạt/ Cháo thịt",
-					sua: "Soup bột Elise"
-				}
-			},
-			{
-				day: "Ba",
-				date: "20/1",
-				sang: {
-					bua_sang: "Sữa hạt/ Elise",
-					nua_buoi: "Sữa hạt/ Elise",
-					com_chau: "Cháo",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Cá kho, Canh bầu",
-					canh: "Canh",
-					trang_mieng: "Xoài",
-					mon_chinh_nho: "Cháo cá/ Sữa hạt/ Elise",
-				},
-				xanh: {
-					bua_phu: "Sữa hạt/ Cháo thịt bí",
-					sua: "Sữa hạt Elise"
-				}
-			},
-			{
-				day: "Tư",
-				date: "21/1",
-				sang: {
-					bua_sang: "Sữa hạt/ Elise",
-					nua_buoi: "Sữa hạt/ Elise",
-					com_chau: "Cháo gà rau mầm",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Gà chiên, Xoài",
-					canh: "Canh nấm",
-					trang_mieng: "Nước cam",
-					mon_chinh_nho: "Cháo gà/ Sữa hạt/ Elise",
-				},
-				xanh: {
-					bua_phu: "Bánh tiêu",
-					sua: "Sữa hạt Elise"
-				}
-			},
-			{
-				day: "Năm",
-				date: "22/1",
-				sang: {
-					bua_sang: "Sữa hạt Elise",
-					nua_buoi: "Sữa hạt/ Elise",
-					com_chau: "Bánh/ Cháo thịt",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Trứng chiên, Canh cải",
-					canh: "Canh",
-					trang_mieng: "Soup bột Sữa hạt",
-					mon_chinh_nho: "Cháo thịt/ Sữa hạt/ Elise",
-				},
-				xanh: {
-					bua_phu: "Mỳ xào",
-					sua: "Sữa hạt Elise"
-				}
-			},
-			{
-				day: "Sáu",
-				date: "23/1",
-				sang: {
-					bua_sang: "Sữa hạt/ Elise",
-					nua_buoi: "Sữa hạt/ Elise",
-					com_chau: "Cháo bò",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Bò xào, Canh bí",
-					canh: "Canh",
-					trang_mieng: "Chuối",
-					mon_chinh_nho: "Cháo bò/ Sữa hạt/ Elise",
-				},
-				xanh: {
-					bua_phu: "Canh bún",
-					sua: "Sữa hạt Elise"
-				}
-			},
-			{
-				day: "Bảy",
-				date: "24/1",
-				sang: {
-					bua_sang: "Xôi gấc",
-					nua_buoi: "",
-					com_chau: "Cháo thịt",
-				},
-				trua: {
-					com: "",
-					mon_chinh: "",
-					canh: "",
-					trang_mieng: "",
-					mon_chinh_nho: "",
-				},
-				xanh: {
-					bua_phu: "",
-					sua: ""
-				}
-			}
-		]
+		isImage: true,
+		image: tuan3Img,
+		days: []
 	},
 	tuan4: {
 		title: "THỰC ĐƠN TUẦN IV",
-		days: [
-			{
-				day: "Hai",
-				date: "26/1",
-				sang: {
-					bua_sang: "Hủ tiếu",
-					nua_buoi: "Sữa hạt/ Elise",
-					com_chau: "Sữa hạt",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Thịt kho trứng",
-					canh: "Canh cải",
-					trang_mieng: "",
-					mon_chinh_nho: "Sữa hạt/ Cháo thịt",
-				},
-				xanh: {
-					bua_phu: "Sữa hạt/ Cháo bò",
-					sua: "Sữa hạt Elise"
-				}
-			},
-			{
-				day: "Ba",
-				date: "27/1",
-				sang: {
-					bua_sang: "Sữa hạt",
-					nua_buoi: "Sữa hạt/ Elise",
-					com_chau: "Sữa hạt",
-				},
-				trua: {
-					com: "Cơm",
-					mon_chinh: "Cá kho",
-					canh: "Canh bầu",
-					trang_mieng: "",
-					mon_chinh_nho: "Sữa hạt/ Cháo cá",
-				},
-				xanh: {
-					bua_phu: "Sữa hạt/ Cháo gà",
-					sua: "Sữa hạt Elise"
-				}
-			},
-			{
-				day: "Tư",
-				date: "28/1",
-				holiday: "NGHỈ TẾT"
-			},
-			{
-				day: "Năm",
-				date: "29/1",
-				holiday: "NGHỈ TẾT"
-			},
-			{
-				day: "Sáu",
-				date: "30/1",
-				holiday: "NGHỈ TẾT"
-			}
-		]
+		isImage: true,
+		image: tuan4Img,
+		days: []
 	}
 };
 
 export const ThucDonModal: React.FC<ThucDonModalProps> = ({ isOpen, onClose }) => {
-	const [activeTab, setActiveTab] = useState<'thang12' | 'tuan1' | 'tuan2' | 'tuan3' | 'tuan4'>('tuan4');
+	const [activeTab, setActiveTab] = useState<'tuan1' | 'tuan2' | 'tuan3' | 'tuan4'>('tuan4');
 
 	const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
 		if (e.target === e.currentTarget) {
@@ -732,9 +296,6 @@ export const ThucDonModal: React.FC<ThucDonModalProps> = ({ isOpen, onClose }) =
 				<ModalTitle>🍽️ Thực Đơn Nhà Trường</ModalTitle>
 				
 				<TabContainer>
-					<TabButton active={activeTab === 'thang12'} onClick={() => setActiveTab('thang12')}>
-						Tuần 4 Tháng 12
-					</TabButton>
 					<TabButton active={activeTab === 'tuan1'} onClick={() => setActiveTab('tuan1')}>
 						Tuần 1
 					</TabButton>
@@ -757,6 +318,11 @@ export const ThucDonModal: React.FC<ThucDonModalProps> = ({ isOpen, onClose }) =
 				<MenuContainer>
 					<WeekTitle>TRƯỜNG MẦM NON TRÚC ĐÀO - {currentMenu.title}</WeekTitle>
 					
+					{currentMenu.isImage ? (
+						<ImageContainer>
+							<MenuImage src={currentMenu.image} alt={currentMenu.title} />
+						</ImageContainer>
+					) : (
 					<MenuTable>
 						<TableHead>
 							<TableHeadRow>
@@ -804,6 +370,7 @@ export const ThucDonModal: React.FC<ThucDonModalProps> = ({ isOpen, onClose }) =
 							))}
 						</TableBody>
 					</MenuTable>
+					)}
 				</MenuContainer>
 			</ModalContent>
 		</ModalOverlay>
