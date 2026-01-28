@@ -32,7 +32,7 @@ export const MyChatBot = () => {
 				// https://github.com/React-ChatBotify-Plugins/llm-connector/blob/main/docs/providers/OpenAI.md
 				provider: new OpenaiProvider({
 					mode: 'direct',
-					model: 'gpt-4.1-nano',
+					model: 'gpt-5-mini',
 					responseFormat: 'stream',
 					apiKey: apiKey,
 				}),
