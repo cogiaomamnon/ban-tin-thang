@@ -367,22 +367,32 @@ export const HeaderSection = () => {
 			date: "20/01/2026",
 			content: "Kính gửi Quý phụ huynh,\n\nTrường Mầm Non Trúc Đào trân trọng thông báo lịch nghỉ Tết Nguyên Đán Bính Ngọ 2026 như sau:",
 			sections: [
-				{ title: "📅 Thời gian nghỉ", text: "Từ ngày 26/01/2026 đến hết ngày 02/02/2026. Trường mở cửa trở lại vào ngày 03/02/2026." },
-				{ title: "📝 Lưu ý quan trọng", text: "Phụ huynh vui lòng hoàn tất việc đóng học phí trước ngày 25/01/2026. Đồ dùng cá nhân của bé cần mang về nhà trong ngày 25/01/2026." },
+				{ title: "📅 Thời gian nghỉ", text: "Từ ngày 14/02/2026 (27 tháng Chạp) đến hết ngày 22/02/2026 (mùng 6 tháng Giêng). Trường mở cửa trở lại vào ngày 23/02/2026." },
+				{ title: "📝 Lưu ý quan trọng", text: "Phụ huynh vui lòng hoàn tất việc đóng học phí trước ngày 13/02/2026. Đồ dùng cá nhân của bé cần mang về nhà trong ngày 13/02/2026." },
 				{ title: "🎊 Lời chúc", text: "Nhà trường chúc Quý phụ huynh và các bé một năm mới An Khang - Thịnh Vượng!" }
 			]
 		},
 		2: {
-			title: "Chương trình hoạt động ngoại khóa tháng 2",
-			date: "18/01/2026",
-			content: "Kính gửi Quý phụ huynh,\n\nNhà trường tổ chức chương trình hoạt động ngoại khóa nhằm giúp các bé phát triển toàn diện.",
+			title: "Thông báo về học phí tháng 2/2026",
+			date: "08/01/2026",
+			content: "Kính gửi Quý phụ huynh,\n\nTrường Mầm Non Trúc Đào thông báo về việc đóng học phí tháng 2/2026.",
 			sections: [
-				{ title: "🏞️ Địa điểm và thời gian", text: "Địa điểm: Công viên Văn hóa, Quận 1\nThời gian: 08:00 - 15:00, ngày 15/02/2026" },
-				{ title: "🎯 Nội dung hoạt động", text: "- Tham quan và tìm hiểu về thiên nhiên\n- Các trò chơi vận động ngoài trời\n- Picnic cùng bạn bè và giáo viên" },
-				{ title: "💰 Chi phí", text: "Chi phí: 150.000 VNĐ/bé\nHạn đăng ký: Trước 17:00 ngày 10/02/2026" }
+				{ title: "💰 Mức học phí", text: "Học phí tháng 2/2026: 2.500.000 VNĐ/bé\nBao gồm: Học phí, tiền ăn, hoạt động ngoại khóa" },
+				{ title: "⏰ Thời hạn đóng", text: "Hạn chót: 17:00, ngày 31/01/2026" },
+				{ title: "🏦 Hình thức thanh toán", text: "1. Tiền mặt tại văn phòng\n2. Chuyển khoản: Vietcombank - 0123456789 - Trường MN Trúc Đào" }
 			]
 		},
 		3: {
+			title: "Hoạt động trải nghiệm tháng 12",
+			date: "10/12/2025",
+			content: "Kính gửi Quý phụ huynh,\n\nCô xin thông báo tới phụ huynh hoạt động trải nghiệm tháng 12 dành cho các con:",
+			sections: [
+				{ title: "🪖 1️⃣ THAM QUAN DOANH TRẠI BỘ ĐỘI", text: "📅 Ngày: 17/12/2025 (thời gian: 7h45 phút)\n💰 Kinh phí: 30.000đ/bé (tiền xe)\n🌱 Ba mẹ chuẩn bị cho mỗi bạn một ba lô nhỏ đựng sữa với ít bánh" },
+				{ title: "🎅 2️⃣ CHỤP HÌNH & NHẬN QUÀ TỪ ÔNG GIÀ NOEL", text: "📅 Ngày: 23/12/2025 (thời gian: 8h00 tại trường mầm non Trúc Đào)\n💰 Kinh phí: 35.000đ/bé (chụp hình, bánh kẹo)" },
+				{ title: "❤️ Lời cảm ơn", text: "Cảm ơn Quý phụ huynh đã luôn đồng hành cùng nhà trường!" }
+			]
+		},
+		4: {
 			title: "Thông báo về thực đơn dinh dưỡng",
 			date: "15/01/2026",
 			content: "Kính gửi Quý phụ huynh,\n\nThực đơn tuần này đã được cập nhật với các món ăn bổ dưỡng, đảm bảo đủ chất dinh dưỡng cho các bé.",
@@ -464,62 +474,20 @@ export const HeaderSection = () => {
 		{
 			id: 1,
 			title: "Thông báo nghỉ Tết Nguyên Đán 2026",
-			text: "Trường Mầm Non Trúc Đào thông báo lịch nghỉ Tết Nguyên Đán từ ngày 26/01/2026 đến hết 02/02/2026. Trường mở cửa trở lại vào ngày 03/02/2026.",
+			text: "Trường Mầm Non Trúc Đào thông báo lịch nghỉ Tết Nguyên Đán từ ngày 14/02/2026 (27 tháng Chạp) đến hết ngày 22/02/2026 (mùng 6 tháng Giêng). Trường mở cửa trở lại vào ngày 23/02/2026.",
 			date: "20/01/2026"
 		},
 		{
 			id: 2,
-			title: "Chương trình hoạt động ngoại khóa tháng 2",
-			text: "Nhà trường tổ chức hoạt động ngoại khóa tại Công viên Văn hóa vào ngày 15/02/2026. Phụ huynh vui lòng đăng ký cho bé tham gia trước ngày 10/02/2026.",
-			date: "18/01/2026"
-		},
-		{
-			id: 3,
-			title: "Thông báo về thực đơn dinh dưỡng",
-			text: "Thực đơn tuần này đã được cập nhật với các món ăn bổ dưỡng, đa dạng giúp bé phát triển toàn diện. Phụ huynh có thể xem chi tiết tại mục Lịch Học.",
-			date: "15/01/2026"
-		},
-		{
-			id: 4,
-			title: "Lịch họp phụ huynh đầu năm 2026",
-			text: "Trường tổ chức buổi họp phụ huynh đầu năm vào lúc 18h00 ngày 10/02/2026 tại hội trường nhà trường. Đề nghị phụ huynh sắp xếp thời gian tham dự.",
-			date: "12/01/2026"
-		},
-		{
-			id: 5,
-			title: "Chương trình khám sức khỏe định kỳ",
-			text: "Nhà trường phối hợp với Bệnh viện Nhi Đồng tổ chức khám sức khỏe định kỳ cho các bé vào ngày 05/02/2026. Không thu thêm phí.",
-			date: "10/01/2026"
-		},
-		{
-			id: 6,
 			title: "Thông báo về học phí tháng 2/2026",
 			text: "Phụ huynh vui lòng hoàn tất việc đóng học phí tháng 2/2026 trước ngày 31/01/2026. Mọi thắc mắc xin liên hệ văn phòng nhà trường.",
 			date: "08/01/2026"
 		},
 		{
-			id: 7,
-			title: "Chương trình học bơi cho trẻ",
-			text: "Trường mở lớp dạy bơi cho các bé từ 4-5 tuổi bắt đầu từ tháng 3/2026. Đăng ký trước ngày 15/02/2026 để được ưu đãi 10%.",
-			date: "05/01/2026"
-		},
-		{
-			id: 8,
-			title: "Tổng kết học kỳ I năm học 2025-2026",
-			text: "Buổi tổng kết học kỳ I và trao giải cho các bé xuất sắc sẽ diễn ra vào ngày 20/01/2026. Kính mời quý phụ huynh tham dự.",
-			date: "03/01/2026"
-		},
-		{
-			id: 9,
-			title: "Thông báo tuyển sinh năm học 2026-2027",
-			text: "Trường Mầm Non Trúc Đào chính thức nhận hồ sơ đăng ký tuyển sinh năm học 2026-2027 từ ngày 01/03/2026. Liên hệ hotline: 0123456789.",
-			date: "02/01/2026"
-		},
-		{
-			id: 10,
-			title: "Lễ khai giảng năm học mới",
-			text: "Lễ khai giảng năm học 2025-2026 đã diễn ra thành công tốt đẹp với sự tham gia đông đảo của phụ huynh và các bé. Xin cảm ơn sự hỗ trợ của quý phụ huynh.",
-			date: "28/12/2025"
+			id: 3,
+			title: "Hoạt động trải nghiệm tháng 12",
+			text: "Trường tổ chức 2 hoạt động trải nghiệm: Tham quan doanh trại bộ đội (17/12/2025) và Chụp hình & nhận quà từ Ông già Noel (23/12/2025).",
+			date: "10/12/2025"
 		}
 	];
 
@@ -533,7 +501,7 @@ export const HeaderSection = () => {
 								<path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" strokeLinecap="round" strokeLinejoin="round"/>
 								<path d="M13.73 21a2 2 0 0 1-3.46 0" strokeLinecap="round" strokeLinejoin="round"/>
 							</svg>
-							<NotificationBadge>10</NotificationBadge>
+							<NotificationBadge>3</NotificationBadge>
 						</NotificationButton>
 					</NotificationButtonContainer>
 					<Logo>Trúc Đào</Logo>
