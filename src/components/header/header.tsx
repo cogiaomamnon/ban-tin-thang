@@ -393,6 +393,12 @@ export const HeaderSection = () => {
 			]
 		},
 		4: {
+			title: "Lưu ý thời tiết mưa lạnh",
+			date: "28/01/2026",
+			content: "Ba mẹ ơi Thời tiết mưa, gió lạnh dễ ho, sổ mũi ba mẹ mặc ấm và mang tất chân cho các con nhé. Ba mẹ bỏ trong cặp các con thêm bộ đồ dài và thêm đôi tất chân để lỡ bị ướt, bẩn các con có thay ạ ❤️",
+			sections: []
+		},
+		5: {
 			title: "Thông báo về thực đơn dinh dưỡng",
 			date: "15/01/2026",
 			content: "Kính gửi Quý phụ huynh,\n\nThực đơn tuần này đã được cập nhật với các món ăn bổ dưỡng, đảm bảo đủ chất dinh dưỡng cho các bé.",
@@ -402,13 +408,10 @@ export const HeaderSection = () => {
 			]
 		},
 		4: {
-			title: "Lịch họp phụ huynh đầu năm 2026",
-			date: "12/01/2026",
-			content: "Kính gửi Quý phụ huynh,\n\nTrường Mầm Non Trúc Đào kính mời Quý phụ huynh tham dự buổi họp đầu năm 2026.",
-			sections: [
-				{ title: "⏰ Thời gian và địa điểm", text: "Thời gian: 18:00 - 20:00, ngày 10/02/2026\nĐịa điểm: Hội trường nhà trường" },
-				{ title: "📋 Nội dung cuộc họp", text: "- Tổng kết hoạt động năm 2025\n- Kế hoạch giáo dục năm 2026\n- Giải đáp thắc mắc của phụ huynh" }
-			]
+			title: "Lưu ý thời tiết mưa lạnh",
+			date: "28/01/2026",
+			content: "Ba mẹ ơi Thời tiết mưa, gió lạnh dễ ho, sổ mũi ba mẹ mặc ấm và mang tất chân cho các con nhé. Ba mẹ bỏ trong cặp các con thêm bộ đồ dài và thêm đôi tất chân để lỡ bị ướt, bẩn các con có thay ạ ❤️",
+			sections: []
 		},
 		5: {
 			title: "Chương trình khám sức khỏe định kỳ",
@@ -488,6 +491,12 @@ export const HeaderSection = () => {
 			title: "Hoạt động trải nghiệm tháng 12",
 			text: "Trường tổ chức 2 hoạt động trải nghiệm: Tham quan doanh trại bộ đội (17/12/2025) và Chụp hình & nhận quà từ Ông già Noel (23/12/2025).",
 			date: "10/12/2025"
+		},
+		{
+			id: 4,
+			title: "Lưu ý thời tiết mưa lạnh",
+			text: "Thời tiết mưa, gió lạnh dễ ho, sổ mũi. Ba mẹ nhớ mặc ấm và mang tất chân cho các con, bỏ thêm bộ đồ dài và đôi tất chân trong cặp để dự phòng.",
+			date: "28/01/2026"
 		}
 	];
 
@@ -501,7 +510,7 @@ export const HeaderSection = () => {
 								<path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" strokeLinecap="round" strokeLinejoin="round"/>
 								<path d="M13.73 21a2 2 0 0 1-3.46 0" strokeLinecap="round" strokeLinejoin="round"/>
 							</svg>
-							<NotificationBadge>3</NotificationBadge>
+							<NotificationBadge>4</NotificationBadge>
 						</NotificationButton>
 					</NotificationButtonContainer>
 					<Logo>Trúc Đào</Logo>
