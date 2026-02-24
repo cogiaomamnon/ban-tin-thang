@@ -82,26 +82,6 @@ export const Activities = () => {
 							</blockquote>
 							<p className="testimonial-name">&mdash; Cô Thu</p>
 						</figure>
-
-						<figure className="testimonial">
-							<img
-								className="testimonial-img"
-								src={cohiepIMG}
-								alt="Steve Miller"
-							/>
-							<blockquote className="testimonial-text">
-								Các con thân yêu của cô,
-
-								Mỗi ngày đến lớp là một hành trình mới – nơi các con được khám phá, sáng tạo và học cách
-								yêu
-								thương. Cô luôn tin rằng trong mỗi bé đều có một bông hoa xinh đẹp, chỉ cần được vun đắp
-								bằng tình thương và sự kiên nhẫn, bông hoa ấy sẽ nở rộ rực rỡ.
-
-								Cô rất mong sẽ cùng các con và quý phụ huynh tạo nên một năm học tràn đầy niềm vui, yêu
-								thương và những ký ức thật đẹp trong tuổi thơ.
-							</blockquote>
-							<p className="testimonial-name">&mdash; Cô Hiệp</p>
-						</figure>
 					</div>
 				</div>
 				<div className="gallery">
